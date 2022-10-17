@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
+//on importe ici les composants views
 import Home from './views/home';
 import Error from './views/error';
 
