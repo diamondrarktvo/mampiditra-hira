@@ -1,5 +1,7 @@
 const express = require('express');
 
+const musicRoutes = require('./routes/musicRouter');
+
 const app = express();
 
 // for application/json
@@ -16,5 +18,7 @@ app.use((req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     next();
 });
+
+app.use('/api/musics', musicRoutes);
 
 module.exports = app;
