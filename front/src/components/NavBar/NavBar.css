@@ -5,12 +5,20 @@ a{
 }
 
 .container{
-    margin: 0px 100px;
+    margin: 0px 70px 0px 28px;
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-size: calc(10px + 1.5vmin);
+    color : white;
+}
+
+.item_nav:hover{
+    text-decoration: underline;
+    text-decoration-color: #61dafb;
+    
 }
 
 .menu{
@@ -21,8 +29,8 @@ a{
 }
 
 .container img{
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .container .menu .main_menu ul{
@@ -30,6 +38,26 @@ a{
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.container .menu .main_menu ul li{
+    text-transform: capitalize;
+}
+
+.menu .other_menu{
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .other_menu select{
+    font-size: calc(10px + 0.8vmin);
+    width: 100px;
+    height: 38px;
+    background-color: #001822;
+    color: white;
+    border-color: #001822;
+    border-bottom-color: white;
 }
 
 @media only screen and (max-width: 800px){

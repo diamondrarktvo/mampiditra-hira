@@ -12,18 +12,21 @@ const NavBar = () => {
             <div className="menu">
                 <div className="main_menu">
                     <ul>
-                        <Link to="/" className="item_nav">
-                            <li>Accueil</li>
+                        <Link to="/">
+                            <li  className="item_nav">Accueil</li>
                         </Link>
-                        <Link to="/telechargement" className="item_nav">
-                            <li>Télecharger</li>
+                        <Link to="/telechargement">
+                            <li className="item_nav" >Télecharger</li>
                         </Link>
-                        <Link to="/faq" className="item_nav">
-                            <li>FAQ</li>
+                        <Link to="/faq">
+                            <li className="item_nav">FAQ</li>
                         </Link>
                     </ul>
                 </div>
                 <div className="other_menu">
+                    <Link to="/contact">
+                        <p className="item_nav">Contact</p>
+                    </Link>
                     <select>
                         <option value="francais">Français</option>
                         <option value="malagasy">Malagasy</option>
