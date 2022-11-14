@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
 import {NavBar} from '../';
+import {Footer} from '../'
 
 function RouteCustom({children, ...rest}){
     return (
@@ -9,7 +10,7 @@ function RouteCustom({children, ...rest}){
             <Route {...rest} render={() => {
                 return children ? children : <Redirect to="/not-found" />;
             }} />
-            {/*<Footer />*/}
+            <Footer />
         </>
     )
 }

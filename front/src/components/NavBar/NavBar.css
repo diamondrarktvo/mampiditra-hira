@@ -4,7 +4,7 @@ a{
     list-style-type: none;
 }
 
-.container{
+.container_navbar{
     padding: 0px 70px 0px 28px;
     margin-bottom: 10px;
     background-color: #001822 ;
@@ -30,19 +30,19 @@ a{
     align-items: center;
 }
 
-.container img{
+.container_navbar img{
     max-width: 100px;
     max-height: 100px;
 }
 
-.container .menu .main_menu ul{
+.container_navbar .menu .main_menu ul{
     display: flex;
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.container .menu .main_menu ul li{
+.container_navbar .menu .main_menu ul li{
     text-transform: capitalize;
 }
 
@@ -63,7 +63,7 @@ a{
 }
 
 @media only screen and (max-width: 800px){
-    .container{
+    .container_navbar{
         margin: 0px 10px;
     }
 }
@@ -72,7 +72,7 @@ a{
     .menu{
         display: none;
     }
-    .container{
+    .container_navbar{
         margin: 0px;
         display: flex;
         justify-content: space-evenly;
