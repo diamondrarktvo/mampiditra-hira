@@ -1,13 +1,9 @@
 import logo from '../../assets/images/logo.png';
-import { NavBar } from '../../components';
 import './home.css';
 
 function Home() {
   return (
     <div className="Home">
-      <header className="Home-header">
-          <NavBar />
-      </header>
       <div>
           <img src={logo} className="Home-logo" alt="logo" style={{borderRadius: "150px"}} />
           <p>

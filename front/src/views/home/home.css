@@ -20,13 +20,6 @@
     }
   }
   
-  .Home-header {
-    background-color: #001822 ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
   .Home-link {
     color: #61dafb;
   }
