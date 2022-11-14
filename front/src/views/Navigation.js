@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 //on importe ici les composants views
-import Home from './views/home';
-import Error from './views/error';
+import {Home} from './';
+import {Error} from './';
 
-function App() {
+function Navigation() {
   return (
     <BrowserRouter>
       <Switch>
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navigation;
