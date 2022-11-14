@@ -9,7 +9,7 @@ function Home() {
           <p>
             Edit <code>src/Home.js</code> and save to reload F5.
           </p>
-          <p>{process.env.REACT_Home_MY_ENV_VARIABLE}</p>
+          <p>{process.env.REACT_APP_MY_ENV_VARIABLE}</p>
           <a
             className="Home-link"
             href="https://reactjs.org"
