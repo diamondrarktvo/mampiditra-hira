@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import './home.css';
 
 function Home() {
@@ -13,12 +14,16 @@ function Home() {
                 Adipisicing do culpa consequat eu enim. Cupidatat laboris sit sunt incididunt anim esse voluptate
                 dolor adipisicing nostrud velit culpa sit nulla.</h4>
               <div className="button_utils">
-                  <button>
+                  <Link to="/telechargement">
+                    <button>
                       Get started
-                  </button>
-                  <button>
-                      More info
-                  </button>
+                    </button>
+                  </Link>
+                  <Link to="/about">
+                    <button>
+                          More info
+                    </button>
+                  </Link>
               </div>
             </div>
         </div>
