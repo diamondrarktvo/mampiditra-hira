@@ -6,3 +6,7 @@
     background-color: #001822;
     height: calc(0px + 100vmin);
 }
+
+.container_error img{
+   height: 48vmin;
+}
