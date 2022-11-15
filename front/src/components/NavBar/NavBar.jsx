@@ -2,6 +2,7 @@ import React from "react";
 import './NavBar.css';
 import logo from '../../assets/images/logo.png';
 import {Link} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
 
 const NavBar = () => {
     return(
@@ -21,6 +22,9 @@ const NavBar = () => {
                         <Link to="/faq">
                             <li className="item_nav">FAQ</li>
                         </Link>
+                        <HashLink to="/#about">
+                            <li className="item_nav">About</li>
+                        </HashLink>
                     </ul>
                 </div>
                 <div className="other_menu">

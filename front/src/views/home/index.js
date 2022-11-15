@@ -1,6 +1,12 @@
 import {Link} from 'react-router-dom';
 import './home.css';
 
+//images pour brand one
+import disque_ph from '../../assets/images/forgotten_disk.png';
+import album_ph from '../../assets/images/forgotten_alb.jpeg';
+import background_ph from '../../assets/images/backgroun_alb.svg';
+
+
 function Home() {
   return (
     <div className="Home">
@@ -27,7 +33,23 @@ function Home() {
               </div>
             </div>
         </div>
-        
+        <div className='section'>
+          <div className='brand_one'>
+            <div className='illustration'>
+              <img className='image_brand_one background_ph' src={background_ph} alt="background" />
+              <img className='image_brand_one disque_ph' src={disque_ph} alt="disque" />
+              <img className='image_brand_one album_ph' src={album_ph} alt="album" />
+            </div>
+          </div>
+
+          <div className='brand_two'>
+            
+          </div>
+
+          <div className='brand_three'>
+            
+          </div>
+        </div>
     </div>
   );
 }

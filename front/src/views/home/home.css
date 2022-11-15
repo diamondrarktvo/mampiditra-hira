@@ -10,9 +10,9 @@ code couleur:
 
 .Home {
     text-align: center;
-    min-height: 800px;
   }
 
+  /*Landing page section*/
 .Home .landing{
   display: flex;
   justify-content: center;
@@ -34,4 +34,43 @@ code couleur:
     margin: 10px 16px;
 }
 
-  
+
+/*section page*/
+.section .brand_one{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section .brand_one .illustration{
+  position: relative;
+}
+
+.image_brand_one{
+  height: 38vh;
+  width: 20vw;
+  border-radius: 32px;
+}
+
+.illustration .background_ph{
+  position: absolute;
+  height: 44vh;
+  width: 19vw;
+}
+.illustration .disque_ph{
+  position: absolute;
+  height: 46vh;
+  width: 22vw;
+  z-index: 2;
+  /* top: 16px;
+  left: -402px; */
+}
+.illustration .album_ph{
+  position: absolute;
+  height: 38vh;
+  width: 19vw;
+  z-index: 3;
+  /* top: -30px;
+  left: -800px; */
+  transform: rotate(-16deg);
+}
