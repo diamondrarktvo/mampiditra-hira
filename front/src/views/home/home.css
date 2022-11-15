@@ -1,35 +1,37 @@
 /**
 * couleur :
 * #001822 : background
-*black
-*vert : #
+code couleur:
+#0098da (bleu)
+#a8cf45 (vert)
+#001822 (black)
+#e6e6e8 (gris)
 */
 
 .Home {
     text-align: center;
+    min-height: 800px;
   }
-  
-  .Home-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .Home-logo {
-      animation: Home-logo-spin infinite 20s linear;
-    }
-  }
-  
-  .Home-link {
-    color: #61dafb;
-  }
-  
-  @keyframes Home-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+
+.Home .landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 580px;
+  background: url("../../assets/images/background_landing.jpg") no-repeat fixed center bottom;
+  background-size: cover;
+  /* background-color: red; */
+}
+
+.landing .content_landing{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing .content_landing .button_utils button{
+    margin: 10px 16px;
+}
+
   

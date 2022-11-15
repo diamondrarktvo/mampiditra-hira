@@ -1,26 +1,19 @@
-a{
-    text-decoration: none;
-    color: white;
-    list-style-type: none;
-}
-
 .container_navbar{
-    padding: 0px 70px 0px 28px;
-    margin-bottom: 10px;
+    padding: 0px 70px 0px 40px;
     background-color: #001822 ;
     display: flex;
     flex: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: calc(10px + 1.5vmin);
+    font-size: calc(10px + 0.8vmin);
     color : white;
+    font-weight: bold;
 }
 
 .item_nav:hover{
     text-decoration: underline;
     text-decoration-color: #61dafb;
-    
 }
 
 .menu{
@@ -47,9 +40,10 @@ a{
 }
 
 .menu .other_menu{
-    width: 28%;
+    width: 20%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .menu .other_menu select{
@@ -60,6 +54,7 @@ a{
     color: white;
     border-color: #001822;
     border-bottom-color: white;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 800px){
