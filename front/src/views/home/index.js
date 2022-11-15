@@ -6,7 +6,7 @@ function Home() {
     <div className="Home">
         <div className="landing">
             <div className="content_landing">
-              <h2>MP3 DOWNLOADER GASY</h2>
+              <h1 style={{fontSize: '4.5vmin'}}>MP3 DOWNLOADER GASY</h1>
               <h4>LoremAdipisicing aliquip ullamco consectetur non id reprehenderit eiusmod proident Lorem. 
                 Eu id id pariatur aliqua dolore consequat consectetur enim aliquip esse ullamco aute nostrud 
                 fugiat. Magna deserunt ex sint id qui culpa ad. Pariatur tempor ullamco dolor est aliqua do 
@@ -27,6 +27,7 @@ function Home() {
               </div>
             </div>
         </div>
+        
     </div>
   );
 }
