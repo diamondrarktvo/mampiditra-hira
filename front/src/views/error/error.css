@@ -1,0 +1,8 @@
+.container_error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #001822;
+    height: calc(0px + 100vmin);
+}
