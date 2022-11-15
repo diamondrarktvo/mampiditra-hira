@@ -6,7 +6,7 @@ function Error() {
   return (
     <div className="container_error">
         <img src={bg_error} alt="404 not found" />
-        <p>Revenir à la page d'accueil...</p>
+        <p style={{fontSize: '2.5vmin'}}>Revenir à la page d'accueil...</p>
         <Link to="/">
           <button>Accueil</button>
         </Link>
