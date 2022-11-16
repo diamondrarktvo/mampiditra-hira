@@ -1,0 +1,18 @@
+.container_error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #001822;
+    height: 100vh;
+}
+
+.container_error img{
+   height: 48vmin;
+}
+
+@media only screen and (max-width: 250px) {
+    .container_error button{
+        padding: 8px;
+    }
+}

@@ -1,19 +1,23 @@
+import React from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import {RouteCustom} from '../components';
 
 //on importe ici les composants views
-import Home from './views/home';
-import Error from './views/error';
+import {Home} from './';
+import {Error} from './';
 
-function App() {
+function Navigation() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Home} />
         <Route path="/not-found" exact component={Error} />
+        <RouteCustom path='/' exact>
+          <Home />
+        </RouteCustom>
         <Redirect from="*" to="/not-found" />
       </Switch>
     </BrowserRouter>
   );
 }
 
-export default App;
+export default Navigation;
