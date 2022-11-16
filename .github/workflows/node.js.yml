@@ -1,0 +1,21 @@
+name: Sync multiple branches
+on:
+  push:
+    branches:
+      - 'dama'
+      - 'tino'
+      - 'mihary'
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge dama -> develop
+        uses: devmasx/merge-branch@1.4.0
+
+        with:
+          type: now
+          from_branch: dama
+          target_branch: develop
+          github_token: ${{ github.token }}
