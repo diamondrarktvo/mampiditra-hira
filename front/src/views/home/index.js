@@ -1,3 +1,4 @@
+import {HashLink} from 'react-router-hash-link';
 import {Link} from 'react-router-dom';
 import './home.css';
 
@@ -28,11 +29,11 @@ function Home() {
                       Get started
                     </button>
                   </Link>
-                  <Link to="/about">
+                  <HashLink to="/#about">
                     <button>
                           More info
                     </button>
-                  </Link>
+                  </HashLink>
               </div>
             </div>
         </div>
