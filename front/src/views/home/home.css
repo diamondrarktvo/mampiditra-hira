@@ -160,25 +160,25 @@ code couleur:
   }
 
   .brand{
-    margin: 180px 94px 0px 94px;
+    /*margin: 180px 94px 0px 94px;*/
   }
 
   .section .brand_one{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .brand_one .description_brand{
     position: relative;
-    top: -102px;
+    top: -82px;
     height: 60vh;
     width: 40vw;
   }
   .description_brand .info_description_brand{
     position: relative;
-    top: -72px;
-    left: 76px;
+    top: -62px;
+    left: 146px;
     width: 100%;
     text-align: left;
     display: flex;
