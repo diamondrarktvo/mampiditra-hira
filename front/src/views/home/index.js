@@ -4,7 +4,7 @@ import './home.css';
 //images pour brand one
 import disque_ph from '../../assets/images/forgotten_disk.png';
 import album_ph from '../../assets/images/forgotten_alb.jpeg';
-import background_ph from '../../assets/images/backgroun_alb.svg';
+import background_ph from '../../assets/images/backgroun_alb.png';
 
 
 function Home() {
@@ -34,7 +34,7 @@ function Home() {
             </div>
         </div>
         <div className='section'>
-          <div className='brand_one'>
+          <div className='brand brand_one'>
             <div className='illustration'>
               <img className='image_brand_one background_ph' src={background_ph} alt="background" />
               <img className='image_brand_one disque_ph' src={disque_ph} alt="disque" />
@@ -42,11 +42,11 @@ function Home() {
             </div>
           </div>
 
-          <div className='brand_two'>
+          <div className='brand brand_two'>
             
           </div>
 
-          <div className='brand_three'>
+          <div className='brand brand_three'>
             
           </div>
         </div>
