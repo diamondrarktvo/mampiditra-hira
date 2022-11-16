@@ -98,7 +98,7 @@ code couleur:
 @media only screen and (min-width: 600px){
   .section .brand_one .illustration{
     height: 300px;
-    top: -50px;
+    top: 0px;
     left: -80px;
   }
   .illustration .background_ph{
