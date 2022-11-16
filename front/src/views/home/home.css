@@ -37,11 +37,11 @@ code couleur:
 
 /*section page*/
 .section{
-  margin: 32px 20px;
+  margin: 32px 0px;
 }
 
 .brand{
-  margin-top: 180px;
+  margin: 180px 44px 0px 44px;
 }
 
 .section .brand_one{
@@ -156,13 +156,14 @@ code couleur:
 /*desktop*/
 @media only screen and (min-width: 1400px){
   .section .brand_one .illustration{
-    height: 700px;
+    height: 400px;
   }
   .illustration .background_ph{
     display: block;
     position: absolute;
     height: 42vmin;
-    width: 24vw;
+    width: 20vw;
+    left: 32px;
   }
   .illustration .disque_ph{
     display: block;
