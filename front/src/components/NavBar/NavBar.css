@@ -1,5 +1,5 @@
 .container_navbar{
-    padding: 0px 70px 0px 40px;
+    padding: 0px 70px 0px 30px;
     background-color: #001822 ;
     display: flex;
     flex: 1;
@@ -57,7 +57,7 @@
     font-weight: bold;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px){   
     .container_navbar{
         margin: 0px 10px;
     }
@@ -71,5 +71,11 @@
         margin: 0px;
         display: flex;
         justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 1024px){   
+    .other_menu p{
+        margin: 0px 5px;
     }
 }

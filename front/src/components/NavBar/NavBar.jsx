@@ -29,7 +29,7 @@ const NavBar = () => {
                 </div>
                 <div className="other_menu">
                     <Link to="/contact">
-                        <p className="item_nav" style={{marginRight: '12px'}}>Contact</p>
+                        <p className="item_nav">Contact</p>
                     </Link>
                     <select>
                         <option value="francais">Français</option>
