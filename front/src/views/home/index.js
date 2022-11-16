@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom';
 import './home.css';
 
+//components
+import {TitleCustom} from '../../components';
+
 //images pour brand one
 import disque_ph from '../../assets/images/forgotten_disk.png';
 import album_ph from '../../assets/images/forgotten_alb.jpeg';
@@ -39,6 +42,16 @@ function Home() {
               <img className='image_brand_one background_ph' src={background_ph} alt="background" />
               <img className='image_brand_one disque_ph' src={disque_ph} alt="disque" />
               <img className='image_brand_one album_ph' src={album_ph} alt="album" />
+            </div>
+            <div className='description_brand'> 
+                <TitleCustom title="Music" />
+                <div className='info_description_brand'>
+                  <h1>Download latest song or album</h1>
+                  <p>ENostrud minim consectetur nisi Lorem cillum minim do. Magna mollit elit eiusmod ex cupidatat adipisicing dolore. In cillum eiusmod laborum proident anim non quis voluptate aliquip dolore quis. Qui ipsum duis officia est anim fugiat. Veniam tempor qui cillum adipisicing qui qui ea labore id eiusmod reprehenderit sunt.</p>
+                  <Link to="/telechargement">
+                    <button>Télecharger</button>
+                  </Link>
+                </div>
             </div>
           </div>
 

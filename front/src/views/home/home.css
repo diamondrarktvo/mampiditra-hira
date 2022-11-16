@@ -38,14 +38,11 @@ code couleur:
 /*section page*/
 .section{
   margin: 32px 0px;
+  position: relative;
 }
 
 .brand{
-  margin: 180px 44px 0px 44px;
-}
-
-.section .brand_one{
-  
+  margin: 180px 54px 0px 54px;
 }
 
 .section .brand_one .illustration{
@@ -56,11 +53,14 @@ code couleur:
   border-radius: 32px;
 }
 
-/*Responsive brand*/
+
+/*Responsive*/
 /*extra small*/
 @media only screen and (min-width: 100px){
   .section .brand_one .illustration{
     height: 8vh;
+    top: -60px;
+    left: -70px;
   }
   .illustration .background_ph{
     display: block;
@@ -87,12 +87,19 @@ code couleur:
     z-index: 3;
     transform: rotate(-16deg);
   }
+  .section .brand_one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*small*/
 @media only screen and (min-width: 600px){
   .section .brand_one .illustration{
     height: 300px;
+    top: -50px;
+    left: -80px;
   }
   .illustration .background_ph{
     display: block;
@@ -151,6 +158,34 @@ code couleur:
     z-index: 3;
     transform: rotate(-16deg);
   }
+
+  .brand{
+    margin: 180px 94px 0px 94px;
+  }
+
+  .section .brand_one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .brand_one .description_brand{
+    position: relative;
+    top: -102px;
+    height: 60vh;
+    width: 40vw;
+  }
+  .description_brand .info_description_brand{
+    position: relative;
+    top: -72px;
+    left: 76px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 /*desktop*/
@@ -184,4 +219,17 @@ code couleur:
     z-index: 3;
     transform: rotate(-16deg);
   }
+  .brand{
+    margin: 180px 54px 0px 54px;
+  }
+  .section .brand_one{
+    justify-content: space-around;
+  }
+  .description_brand .info_description_brand{
+    position: relative;
+    top: -102px;
+    left: 76px;
+    width: 100%;
+  }
 }
+
