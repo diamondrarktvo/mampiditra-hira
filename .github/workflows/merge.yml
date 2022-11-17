@@ -9,7 +9,7 @@ on:
       - 'mihary'
       - 'tino'
 jobs:
-  merge-branch:
+  merge-branch-develop:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
