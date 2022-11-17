@@ -1,5 +1,5 @@
 name: Merge branch CD
-run-name: ${{ github.actor }} format('autorelease{0} pending', ':') ${{ github.event.head_commit.message }}
+run-name: "${{ github.actor }}: "  ${{ github.event.head_commit.message }}
 on:
   push:
     branches:
