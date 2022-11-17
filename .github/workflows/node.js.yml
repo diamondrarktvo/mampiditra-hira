@@ -1,7 +1,7 @@
 name: Merge branch CD
 run-name: ${{ github.actor }} ->  ${{ github.event.head_commit.message }}
 env: 
-  CURRENT_BRANCH: ${GITHUB_REF}
+  CURRENT_BRANCH: ${{ github.ref }}
 on:
   push:
     branches:
