@@ -1,11 +1,15 @@
 name: Merge branch CD
-run-name: "${{ github.actor }}: "  ${{ github.event.head_commit.message }}
+run-name: ${{ github.ref_name }} ->  ${{ github.event.head_commit.message }}
+env: 
+  DAMA: dama
+  MIHARY: mihary
+  TINO: tino
 on:
   push:
     branches:
-      - 'dama'
-      - 'tino'
-      - 'mihary'
+      - $DAMA
+      - $MIHARY
+      - $TINO
 jobs:
   merge-branch:
     runs-on: ubuntu-latest
