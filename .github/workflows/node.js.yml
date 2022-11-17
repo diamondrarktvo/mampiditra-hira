@@ -16,4 +16,4 @@ jobs:
           type: now
           from_branch: ${BRANCH_NAME}
           target_branch: develop
-          github_token: ${{ github.token }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
