@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - 'dama'
-      - 'tino'
-      - 'mihary'
 jobs:
   sync-branch:
     runs-on: ubuntu-latest
