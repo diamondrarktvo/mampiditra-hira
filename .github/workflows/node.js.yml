@@ -1,19 +1,21 @@
-name: Sync multiple branches
+name: Merge branch CD
 on:
   push:
     branches:
       - 'dama'
+      - 'tino'
+      - 'mihary'
 jobs:
-  sync-branch:
+  merge-branch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
 
-      - name: Merge dama -> develop
+      - name: Merge ${GITHUB_REF##*/} -> develop
         uses: devmasx/merge-branch@1.4.0
 
         with:
           type: now
-          from_branch: dama
+          from_branch: ${GITHUB_REF##*/}
           target_branch: develop
           github_token: ${{ secrets.GITHUB_TOKEN }}
