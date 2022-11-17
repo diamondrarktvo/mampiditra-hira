@@ -14,6 +14,6 @@ jobs:
 
         with:
           type: now
-          from_branch: dama
+          from_branch: ${BRANCH_NAME}
           target_branch: develop
           repo-token: ${{ secrets.GITHUB_TOKEN }}

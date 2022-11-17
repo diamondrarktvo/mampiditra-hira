@@ -28,9 +28,9 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="other_menu">
-                    <Link to="/contact">
+                    <HashLink to="/#contact">
                         <p className="item_nav">Contact</p>
-                    </Link>
+                    </HashLink>
                     <select>
                         <option value="francais">Français</option>
                         <option value="malagasy">Malagasy</option>
