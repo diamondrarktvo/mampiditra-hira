@@ -14,6 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Merge branch to develop
+        run: echo $CURRENT_BRANCH
         uses: devmasx/merge-branch@1.4.0
 
         with:
