@@ -57,7 +57,7 @@ function Home() {
           </div>
 
           <div className='brand brand_two'>
-            
+            <p>Test oh CI</p>
           </div>
 
           <div className='brand brand_three'>
