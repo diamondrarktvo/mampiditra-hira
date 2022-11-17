@@ -58,6 +58,8 @@ function Home() {
 
           <div className='brand brand_two'>
             <p>Test oh CI</p>
+            <p>Lorem ipsum cupidatat excepteur id ad ut mollit labore enim fugiat eiusmod.</p>
+            <p>Velit labore nulla ipsum anim esse sunt officia fugiat et excepteur cillum irure ad in. Adipisicing nostrud nulla sunt occaecat pariatur ut id ex officia dolor. Nulla Lorem laborum velit sunt est occaecat cillum sunt. Tempor ex ex anim sit sunt laborum non laborum dolor elit aliquip quis. Ad aliquip occaecat officia est sunt minim ad anim nostrud cillum id velit in. Est est anim veniam tempor id magna nisi amet anim eu amet fugiat eu elit.</p>
           </div>
 
           <div className='brand brand_three'>
