@@ -20,6 +20,6 @@ jobs:
 
         with:
           type: now
-          from_branch: echo ${GITHUB_REF##*/}
+          from_branch: $DAMA
           target_branch: develop
           github_token: ${{ secrets.GITHUB_TOKEN }}
