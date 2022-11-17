@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      
+      - name: Echo current branch
+        run: echo $CURRENT_BRANCH
+
       - name: Merge branch to develop
         uses: devmasx/merge-branch@1.4.0
 
