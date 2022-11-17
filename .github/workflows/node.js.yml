@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-
-      - name: Merge ${GITHUB_REF##*/} -> develop
+      - name: Merge branch to develop
+        run-name: ${{ github.actor }} is already push
         uses: devmasx/merge-branch@1.4.0
 
         with:
