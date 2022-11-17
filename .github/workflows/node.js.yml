@@ -1,19 +1,25 @@
-name: Sync multiple branches
+name: Merge branch CD
+run-name: ${{ github.actor }} ->  ${{ github.event.head_commit.message }}
+env: 
+  DAMA: 'dama'
+  MIHARY: 'mihary'
+  TINO: 'tino'
 on:
   push:
     branches:
       - 'dama'
+      - 'mihary'
+      - 'tino'
 jobs:
-  sync-branch:
+  merge-branch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-
-      - name: Merge dama -> develop
+      - name: Merge branch to develop
         uses: devmasx/merge-branch@1.4.0
 
         with:
           type: now
-          from_branch: dama
+          from_branch: ${{ env.DAMA }}
           target_branch: develop
           github_token: ${{ secrets.GITHUB_TOKEN }}
