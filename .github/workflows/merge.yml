@@ -33,13 +33,13 @@ jobs:
       uses: actions/checkout@v2
 
     # Copy the 'front' folder
-    - name: Push posts
+    - name: Push front
       uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'front/' # Folder to copy
-        destination_repo: 'https://github.com/diamondrarktvo/mp3-downloader-prod.git' # Target repo
+        destination_repo: 'diamondrarktvo/mp3-downloader-prod' # Target repo
         destination_folder: 'front/' # Folder where to copy it
         user_email: 'amada.rktvo@gmail.com'
         user_name: 'diamondrarktvo'
