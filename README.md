@@ -1,6 +1,6 @@
 # mampiditra-hira web application
 
-# Contrib Tino - Mihary - Diams
+# Contribution by Tino - Mihary - Diams
 
 ## Présentation <br>
 <p align="center">
