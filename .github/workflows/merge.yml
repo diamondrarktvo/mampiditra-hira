@@ -11,6 +11,7 @@ on:
       - 'tino'
 jobs:
   merge-branch-develop:
+    name: Merge local
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -34,6 +35,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
   
   merge-upstream:
+    name: Merge remote
+    needs: merge-branch-develop
     runs-on: ubuntu-latest
     steps:
         - name: Print hellow from merge upstream
