@@ -37,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Print hellow from merge upstream
-        - run: echo Hello ici 
+          run: echo Hello ici 
       # - uses: actions/checkout@master
 
       # env:
