@@ -34,7 +34,7 @@ jobs:
 
     # Copy the 'front' folder
     - name: Push front
-      uses: dmnemec/copy_file_to_another_repo_action@main
+      uses: dmnemec/copy_file_to_another_repo_action@rakoto
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
