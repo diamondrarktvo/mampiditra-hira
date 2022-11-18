@@ -24,5 +24,26 @@ jobs:
           from_branch: ${{ env.CURRENT_BRANCH }}
           target_branch: develop
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  copy-file:
+    needs: merge-branch-develop
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Copy the 'front' folder
+    - name: Push posts
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'front/' # Folder to copy
+        destination_repo: 'https://github.com/diamondrarktvo/mp3-downloader-prod.git' # Target repo
+        destination_folder: 'front/' # Folder where to copy it
+        user_email: 'amada.rktvo@gmail.com'
+        user_name: 'diamondrarktvo'
+        commit_message: "AUTO: Copying front from develop to preprod"
+        git_server: 'github.com'
         
 
