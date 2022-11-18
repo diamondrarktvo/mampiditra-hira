@@ -60,6 +60,7 @@ function Home() {
             <TitleCustom title="About us" />
             <div className='description_about'>
               <p>Consectetur voluptate ut laborum fugiat eu labore occaecat nulla commodo laborum aliqua ut ea. Nostrud adipisicing ut proident mollit. Officia esse irure sunt irure reprehenderit enim sit nisi. Labore id laboris qui tempor. Incididunt velit culpa voluptate occaecat velit aute voluptate quis aute reprehenderit.</p>
+              <p>Tino</p>
             </div>
           </div>
 
