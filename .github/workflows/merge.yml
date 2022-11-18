@@ -1,3 +1,4 @@
+# il y a une autre syntaxe meilleur que celui ci en utilisant '/release/*' comme branche du coup on ne spécifie plus from_branch
 name: Merge branch CD
 run-name: ${{ github.actor }} ->  ${{ github.event.head_commit.message }}
 env: 
@@ -31,3 +32,19 @@ jobs:
           from_branch: develop
           target_branch: preprod
           github_token: ${{ secrets.GITHUB_TOKEN }}
+  
+  merge-upstream:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Print hellow from merge upstream
+          run: echo Hello ici 
+      # - uses: actions/checkout@master
+
+      # env:
+      #   UPSTREAM_URL: "https://github.com/diamondrarktvo/mp3-downloader-prod.git"
+      #   WORKFLOW_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+      #   UPSTREAM_BRANCH: "main"
+      #   DOWNSTREAM_BRANCH: ""
+      #   FETCH_ARGS: ""
+      #   MERGE_ARGS: ""
+      #   PUSH_ARGS: ""
