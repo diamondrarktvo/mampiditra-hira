@@ -39,9 +39,9 @@ jobs:
         uses: wei/git-sync@v3
 
         with:
-          source_repo: "git@github.com:diamondrarktvo/mampiditra-hira.git"
+          source_repo: "https://diamondrarktvo:"${{ secrets.GITHUB_TOKEN }}"@github.com/diamondrarktvo/mampiditra-hira.git"
           source_branch: "develop"
-          destination_repo: "git@github.com:diamondrarktvo/mp3-downloader-prod.git"
+          destination_repo: "https://diamondrarktvo:"${{ secrets.GITHUB_TOKEN }}"@github.com/diamondrarktvo/mp3-downloader-prod.git"
           destination_branch: "master"
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
           source_ssh_private_key: ${{ secrets.SOURCE_SSH_PRIVATE_KEY }} 
