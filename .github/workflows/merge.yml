@@ -3,6 +3,9 @@ name: Merge branch CD
 run-name: ${{ github.actor }} ->  ${{ github.event.head_commit.message }}
 env: 
   CURRENT_BRANCH: ${{ github.ref_name }}
+  UPSTREAM_URL: "https://github.com/diamondrarktvo/mp3-downloader-prod.git"
+  WORKFLOW_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
+  UPSTREAM_BRANCH: "master"
 on:
   push:
     branches:
@@ -24,30 +27,21 @@ jobs:
           from_branch: ${{ env.CURRENT_BRANCH }}
           target_branch: develop
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Merge branch develop to preprod
-        uses: devmasx/merge-branch@1.4.0
-
-        with:
-          type: now
-          from_branch: develop
-          target_branch: preprod
-          github_token: ${{ secrets.GITHUB_TOKEN }}
   
   merge-upstream:
     name: Merge remote
     needs: merge-branch-develop
     runs-on: ubuntu-latest
     steps:
-        - name: Print hellow from merge upstream
-          run: echo Hello ici 
-      # - uses: actions/checkout@master
+      - uses: actions/checkout@master
+      
+      - name: Merge current change in develop to repository preprod
+        uses: wei/git-sync@v3
 
-      # env:
-      #   UPSTREAM_URL: "https://github.com/diamondrarktvo/mp3-downloader-prod.git"
-      #   WORKFLOW_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
-      #   UPSTREAM_BRANCH: "main"
-      #   DOWNSTREAM_BRANCH: ""
-      #   FETCH_ARGS: ""
-      #   MERGE_ARGS: ""
-      #   PUSH_ARGS: ""
+        with:
+          source_repo: "git@github.com:diamondrarktvo/mampiditra-hira.git"
+          source_branch: "develop"
+          destination_repo: "git@github.com:diamondrarktvo/mp3-downloader-prod.git"
+          destination_branch: "master"
+        
+
