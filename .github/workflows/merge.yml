@@ -3,9 +3,6 @@ name: Merge branch CD
 run-name: ${{ github.actor }} ->  ${{ github.event.head_commit.message }}
 env: 
   CURRENT_BRANCH: ${{ github.ref_name }}
-  UPSTREAM_URL: "https://github.com/diamondrarktvo/mp3-downloader-prod.git"
-  WORKFLOW_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
-  UPSTREAM_BRANCH: "master"
 on:
   push:
     branches:
@@ -27,24 +24,5 @@ jobs:
           from_branch: ${{ env.CURRENT_BRANCH }}
           target_branch: develop
           github_token: ${{ secrets.GITHUB_TOKEN }}
-  
-  merge-upstream:
-    name: Merge remote
-    needs: merge-branch-develop
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      
-      - name: Merge current change in develop to repository preprod
-        uses: wei/git-sync@v3
-
-        with:
-          source_repo: "https://diamondrarktvo:${{ secrets.GITHUB_TOKEN }}@github.com/diamondrarktvo/mampiditra-hira.git"
-          source_branch: "develop"
-          destination_repo: "https://diamondrarktvo:${{ secrets.GITHUB_TOKEN }}@github.com/diamondrarktvo/mp3-downloader-prod.git"
-          destination_branch: "master"
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          source_ssh_private_key: ${{ secrets.SOURCE_SSH_PRIVATE_KEY }} 
-          destination_ssh_private_key: ${{ secrets.DESTINATION_SSH_PRIVATE_KEY }}
         
 
