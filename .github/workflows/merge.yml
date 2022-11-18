@@ -1,0 +1,63 @@
+# il y a une autre syntaxe meilleur que celui ci en utilisant '/release/*' comme branche du coup on ne spécifie plus from_branch
+name: Merge branch CD
+run-name: ${{ github.actor }} ->  ${{ github.event.head_commit.message }}
+env: 
+  CURRENT_BRANCH: ${{ github.ref_name }}
+on:
+  push:
+    branches:
+      - 'dama'
+      - 'mihary'
+      - 'tino'
+jobs:
+  merge-branch-develop:
+    name: Merge local
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge branch ${{ env.CURRENT_BRANCH }} to develop
+        uses: devmasx/merge-branch@1.4.0
+
+        with:
+          type: now
+          from_branch: ${{ env.CURRENT_BRANCH }}
+          target_branch: develop
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  merge-to-preprod:
+    needs: merge-branch-develop
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    # Copie le dossier front vers l'autre repos
+    - name: Copy front to preprod
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'front/' 
+        destination_repo: 'diamondrarktvo/mp3-downloader-prod'
+        destination_folder: 'front/'
+        user_email: 'amada.rktvo@gmail.com'
+        user_name: 'diamondrarktvo'
+        commit_message: "AUTO: Copying front folder from repos develop to preprod"
+        git_server: 'github.com'
+
+    # Copie le dossier back vers l'autre repos
+    - name: Copy back to preprod
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'back/' 
+        destination_repo: 'diamondrarktvo/mp3-downloader-prod' 
+        destination_folder: 'back/' 
+        user_email: 'amada.rktvo@gmail.com'
+        user_name: 'diamondrarktvo'
+        commit_message: "AUTO: Copying back folder from repos develop to preprod"
+        git_server: 'github.com'
+        
+

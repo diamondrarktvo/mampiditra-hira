@@ -1,0 +1,234 @@
+/**
+* couleur :
+* #001822 : background
+code couleur:
+#0098da (bleu)
+#a8cf45 (vert)
+#001822 (black)
+#e6e6e8 (gris)
+*/
+
+.Home {
+    text-align: center;
+  }
+
+  /*Landing page section*/
+.Home .landing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 580px;
+  background: url("../../assets/images/background_landing.jpg") no-repeat fixed center bottom;
+  background-size: cover;
+  /* background-color: red; */
+}
+
+.landing .content_landing{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.landing .content_landing .button_utils button{
+    margin: 10px 16px;
+}
+
+
+/*section page*/
+.section{
+  margin: 32px 0px;
+  position: relative;
+}
+
+.brand{
+  margin: 180px 54px 0px 54px;
+}
+
+.section .brand_one .illustration{
+  position: relative;
+}
+
+.image_brand_one{
+  border-radius: 32px;
+}
+
+
+/*Responsive*/
+/*extra small*/
+@media only screen and (min-width: 100px){
+  .section .brand_one .illustration{
+    height: 8vh;
+    top: -60px;
+    left: -56px;
+  }
+  .illustration .background_ph{
+    display: block;
+    position: absolute;
+    height: 26vmin;
+    width: 26vw;
+  }
+  .illustration .disque_ph{
+    display: block;
+    position: absolute;
+    height: 28vmin;
+    width: 26vw;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+  }
+  .illustration .album_ph{
+    display: block;
+    position: absolute;
+    height: 24vmin;
+    width: 23vw;
+    top: 0;
+    left: 8px;
+    z-index: 3;
+    transform: rotate(-16deg);
+  }
+  .section .brand_one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*small*/
+@media only screen and (min-width: 600px){
+  .section .brand_one .illustration{
+    height: 300px;
+    top: 0px;
+    left: -80px;
+  }
+  .illustration .background_ph{
+    display: block;
+    position: absolute;
+    height: 26vmin;
+    width: 24vw;
+  }
+  .illustration .disque_ph{
+    display: block;
+    position: absolute;
+    height: 28vmin;
+    width: 26vw;
+    z-index: 2;
+    top: 0px;
+    left: -8px;
+  }
+  .illustration .album_ph{
+    display: block;
+    position: absolute;
+    height: 24vmin;
+    width: 22vw;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    transform: rotate(-16deg);
+  }
+}
+
+/*medium*/
+@media only screen and (min-width: 900px){
+  .section .brand_one .illustration{
+    height: 400px;
+  }
+  .illustration .background_ph{
+    display: block;
+    position: absolute;
+    height: 36vh;
+    width: 26vw;
+  }
+  .illustration .disque_ph{
+    display: block;
+    position: absolute;
+    height: 44vh;
+    width: 26vw;
+    z-index: 2;
+    top: -28px;
+    left: 0px;
+  }
+  .illustration .album_ph{
+    display: block;
+    position: absolute;
+    height: 36vh;
+    width: 22vw;
+    top: 0px;
+    left: 20px;
+    z-index: 3;
+    transform: rotate(-16deg);
+  }
+  .brand{
+    /*margin: 180px 94px 0px 94px;*/
+  }
+
+  .section .brand_one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .brand_one .description_brand{
+    position: relative;
+    top: -82px;
+    height: 60vh;
+    width: 40vw;
+  }
+  .description_brand .info_description_brand{
+    position: relative;
+    top: -62px;
+    left: 146px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/*desktop*/
+@media only screen and (min-width: 1400px){
+  .section .brand_one .illustration{
+    height: 400px;
+  }
+  .illustration .background_ph{
+    display: block;
+    position: absolute;
+    height: 42vmin;
+    width: 20vw;
+    left: 32px;
+  }
+  .illustration .disque_ph{
+    display: block;
+    position: absolute;
+    height: 48vmin;
+    width: 24vw;
+    z-index: 2;
+    top: -24px;
+    left: 0px;
+  }
+  .illustration .album_ph{
+    display: block;
+    position: absolute;
+    height: 42vmin;
+    width: 21vw;
+    top: 0px;
+    left: 32px;
+    z-index: 3;
+    transform: rotate(-16deg);
+  }
+  .brand{
+    margin: 180px 54px 0px 54px;
+  }
+  .section .brand_one{
+    justify-content: space-around;
+  }
+  .description_brand .info_description_brand{
+    position: relative;
+    top: -102px;
+    left: 76px;
+    width: 100%;
+  }
+}
+
