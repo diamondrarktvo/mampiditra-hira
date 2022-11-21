@@ -19,9 +19,9 @@ const NavBar = () => {
                         <Link to="/telechargement">
                             <li className="item_nav" >Télecharger</li>
                         </Link>
-                        <Link to="/faq">
+                        <HashLink to="/#faq">
                             <li className="item_nav">FAQ</li>
-                        </Link>
+                        </HashLink>
                         <HashLink to="/#about">
                             <li className="item_nav">About</li>
                         </HashLink>

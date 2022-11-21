@@ -1,5 +1,6 @@
 import {HashLink} from 'react-router-hash-link';
 import {Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './home.css';
 
 //components
@@ -13,6 +14,25 @@ import background_ph from '../../assets/images/backgroun_alb.png';
 
 
 function Home() {
+  const [screenWidth, setScreenWidth] = useState(getWindowWidth()) //utile pour responsive faq
+  const degre = screenWidth >= 1400 ? [-16, 8, 13] : [0, 0, 0];
+
+  /*Effet pour surveiller si l'écran a rediminuer ou élargit*/
+  useEffect(() => {
+    function onHandleWindowWidth(){
+      setScreenWidth(getWindowWidth());
+    }
+    window.addEventListener('resize', onHandleWindowWidth);
+    return() => {
+      window.addEventListener('resize', onHandleWindowWidth);
+    }
+  })
+
+  /*Get le width de l'écran*/
+  function getWindowWidth (){
+    const {innerWidth,} = window;
+    return innerWidth
+  }
   return (
     <div className="Home">
         <div className="landing">
@@ -64,8 +84,22 @@ function Home() {
             </div>
           </div>
 
-          <div className='brand brand_three'>
-            
+          <div className='brand brand_three' id="faq">
+              <TitleCustom title="FAQ" />
+              <div className='question_faq'>
+                  <div className='faq_content' style={{transform:`rotate(${degre[0]}deg)`}}>
+                    <h3>Question 1 ?</h3>
+                    <p>Amet incididunt in commodo fugiat.</p>
+                  </div>
+                  <div className='faq_content' style={{transform:`rotate(${degre[1]}deg)`}}>
+                    <h3>Question 2 ?</h3>
+                    <p>Veniam non adipisicing cupidatat culpa consequat ipsum fugiat voluptate ullamco. Nostrud mollit dolore nisi eu nisi id nostrud enim amet ea incididunt. Aliquip est do non cupidatat. Proident id sit ea dolor duis eiusmod. Proident sint ipsum aute ex ullamco dolore dolore dolore do nulla ullamco do aliquip est. Proident pariatur mollit deserunt nulla eiusmod fugiat officia et sit nisi qui nisi ad proident.</p>
+                  </div>
+                  <div className='faq_content' style={{transform:`rotate(${degre[2]}deg)`}}>
+                    <h3>Question 3 ?</h3>
+                    <p>Ut velit consequat ut nulla ea mollit.</p>
+                  </div>
+              </div>
           </div>
         </div>
     </div>
