@@ -71,8 +71,17 @@ html{
 .brand_two .description_about p{
   width: 68%;
   text-align: center;
+  font-size: 2.6vmin;
 }
 
+.brand_three .question_faq .faq_content{
+  background-color: #e6e6e8;
+  color: #001822;
+  border-radius: 18px;
+  padding: 5px 0px;
+  margin: 8px 0px;
+  text-align: center;
+}
 
 /*Responsive*/
 /*extra small*/
@@ -111,6 +120,19 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  /*FAQ*/
+  .brand_three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .brand_three .question_faq{
+    display: flex;
+    flex-direction: column;
+  }
+  .brand_three .question_faq .faq_content{
+    width: 100%;
   }
 }
 
@@ -249,6 +271,21 @@ html{
     top: -122px;
     left: 76px;
     width: 100%;
+  }
+    /*FAQ*/
+  .brand_three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .brand_three .question_faq{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .brand_three .question_faq .faq_content{
+    width: 30%;
   }
 }
 
