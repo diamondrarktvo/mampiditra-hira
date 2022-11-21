@@ -11,6 +11,7 @@ import album_ph from '../../assets/images/forgotten_alb.jpeg';
 import background_ph from '../../assets/images/backgroun_alb.png';
 
 
+
 function Home() {
   return (
     <div className="Home">
@@ -56,11 +57,10 @@ function Home() {
             </div>
           </div>
 
-          <div className='brand brand_two'>
+          <div className='brand_two' id="about">
             <TitleCustom title="About us" />
             <div className='description_about'>
-              <p>Consectetur voluptate ut laborum fugiat eu labore occaecat nulla commodo laborum aliqua ut ea. Nostrud adipisicing ut proident mollit. Officia esse irure sunt irure reprehenderit enim sit nisi. Labore id laboris qui tempor. Incididunt velit culpa voluptate occaecat velit aute voluptate quis aute reprehenderit.</p>
-              <p>Tino</p>
+                <p>Pariatur fugiat duis deserunt cupidatat aliqua officia adipisicing sunt nulla cupidatat. Dolor tempor consequat commodo nulla ex officia exercitation ad incididunt do est occaecat tempor. Consectetur adipisicing pariatur est labore commodo deserunt ipsum commodo ullamco ex. Velit officia esse ex in nisi incididunt Lorem proident consequat. Aliqua eu consectetur exercitation ex cupidatat pariatur mollit aliqua commodo nisi.</p>
             </div>
           </div>
 

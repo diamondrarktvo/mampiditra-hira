@@ -3,10 +3,14 @@
 * #001822 : background
 code couleur:
 #0098da (bleu)
-#a8cf45 (vert)
-#001822 (black)
+#a8cf45 (vert jaune)
+#001822 (black teal)
 #e6e6e8 (gris)
 */
+
+html{
+  scroll-behavior: smooth;
+}
 
 .Home {
     text-align: center;
@@ -20,7 +24,6 @@ code couleur:
   min-height: 580px;
   background: url("../../assets/images/background_landing.jpg") no-repeat fixed center bottom;
   background-size: cover;
-  /* background-color: red; */
 }
 
 .landing .content_landing{
@@ -42,7 +45,8 @@ code couleur:
 }
 
 .brand{
-  margin: 180px 54px 0px 54px;
+  margin: 140px 54px 0px 54px;
+  font-size: 2.4vmin;
 }
 
 .section .brand_one .illustration{
@@ -51,6 +55,22 @@ code couleur:
 
 .image_brand_one{
   border-radius: 32px;
+}
+
+.brand_two{
+  margin: 180px 0px 0px 0px;
+}
+.brand_two .description_about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 580px;
+  background: url("../../assets/images/about_bg.png") no-repeat fixed center bottom;
+  background-size: cover;
+}
+.brand_two .description_about p{
+  width: 68%;
+  text-align: center;
 }
 
 
@@ -176,7 +196,7 @@ code couleur:
   }
   .description_brand .info_description_brand{
     position: relative;
-    top: -62px;
+    top: -82px;
     left: 146px;
     width: 100%;
     text-align: left;
@@ -226,7 +246,7 @@ code couleur:
   }
   .description_brand .info_description_brand{
     position: relative;
-    top: -102px;
+    top: -122px;
     left: 76px;
     width: 100%;
   }
