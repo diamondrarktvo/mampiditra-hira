@@ -27,14 +27,18 @@ function Home() {
       window.addEventListener('resize', onHandleWindowWidth);
     }
   })
-
   /*Get le width de l'écran*/
   function getWindowWidth (){
     const {innerWidth,} = window;
     return innerWidth
   }
   return (
-    <div className="Home">
+    <div className="Home" id="home">
+        <HashLink to="/#home">
+          <div className="goToTop">
+                  Up
+          </div>
+        </HashLink>
         <div className="landing">
             <div className="content_landing">
               <h1 style={{fontSize: '4.5vmin'}}>MP3 DOWNLOADER GASY</h1>

@@ -14,9 +14,21 @@ html{
 
 .Home {
     text-align: center;
-  }
+}
 
   /*Landing page section*/
+.goToTop{
+  position: fixed;
+  bottom: 16px;
+  z-index: 5;
+  right: 24px;
+  border-radius: 64px;
+  font-size: 4.8vmin;
+  padding: 16px;
+  background-color: white;
+  color: #001822;
+}
+
 .Home .landing{
   display: flex;
   justify-content: center;
@@ -71,7 +83,7 @@ html{
 .brand_two .description_about p{
   width: 68%;
   text-align: center;
-  font-size: 2.6vmin;
+  font-size: 3.4vmin;
 }
 
 .brand_three .question_faq .faq_content{
@@ -130,9 +142,11 @@ html{
   .brand_three .question_faq{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .brand_three .question_faq .faq_content{
-    width: 100%;
+    width: 81%;
   }
 }
 
@@ -178,13 +192,13 @@ html{
   .illustration .background_ph{
     display: block;
     position: absolute;
-    height: 36vh;
+    height: 44vh;
     width: 26vw;
   }
   .illustration .disque_ph{
     display: block;
     position: absolute;
-    height: 44vh;
+    height: 52vh;
     width: 26vw;
     z-index: 2;
     top: -28px;
@@ -193,15 +207,12 @@ html{
   .illustration .album_ph{
     display: block;
     position: absolute;
-    height: 36vh;
+    height: 44vh;
     width: 22vw;
     top: 0px;
     left: 20px;
     z-index: 3;
     transform: rotate(-16deg);
-  }
-  .brand{
-    /*margin: 180px 94px 0px 94px;*/
   }
 
   .section .brand_one{
@@ -212,13 +223,13 @@ html{
 
   .brand_one .description_brand{
     position: relative;
-    top: -82px;
+    top: -62px;
     height: 60vh;
     width: 40vw;
   }
   .description_brand .info_description_brand{
     position: relative;
-    top: -82px;
+    top: -72px;
     left: 146px;
     width: 100%;
     text-align: left;
