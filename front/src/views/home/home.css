@@ -4,7 +4,7 @@
 code couleur:
 #0098da (bleu)
 #a8cf45 (vert jaune)
-#1d1d1e (black teal)
+#1d1d1e (black grey)
 #e6e6e8 (gris)
 */
 
@@ -21,7 +21,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 580px;
+  min-height: 940px;
   background: url("../../assets/images/background_landing.jpg") no-repeat fixed center bottom;
   background-size: cover;
 }
@@ -192,14 +192,14 @@ html {
     display: block;
     position: absolute;
     height: 36vh;
-    width: 26vw;
+    width: 28vw;
   }
 
   .illustration .disque_ph {
     display: block;
     position: absolute;
     height: 44vh;
-    width: 26vw;
+    width: 28vw;
     z-index: 2;
     top: -28px;
     left: 0px;
@@ -209,7 +209,7 @@ html {
     display: block;
     position: absolute;
     height: 36vh;
-    width: 22vw;
+    width: 24vw;
     top: 0px;
     left: 20px;
     z-index: 3;
@@ -236,7 +236,7 @@ html {
   .description_brand .info_description_brand {
     position: relative;
     top: -82px;
-    left: 146px;
+    left: 116px;
     width: 100%;
     text-align: left;
     display: flex;
