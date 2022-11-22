@@ -1,6 +1,6 @@
 .container_navbar{
     padding: 0px 70px 0px 30px;
-    background-color: #001822 ;
+    background-color: #1d1d1e ;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -50,9 +50,9 @@
     font-size: calc(10px + 0.8vmin);
     width: 100px;
     height: 38px;
-    background-color: #001822;
+    background-color: #1d1d1e;
     color: white;
-    border-color: #001822;
+    border-color: #1d1d1e;
     border-bottom-color: white;
     font-weight: bold;
 }

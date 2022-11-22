@@ -1,23 +1,23 @@
 /**
 * couleur :
-* #001822 : background
+* #1d1d1e : background
 code couleur:
 #0098da (bleu)
 #a8cf45 (vert jaune)
-#001822 (black teal)
+#1d1d1e (black teal)
 #e6e6e8 (gris)
 */
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 .Home {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  /*Landing page section*/
-.Home .landing{
+/*Landing page section*/
+.Home .landing {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,41 +26,42 @@ html{
   background-size: cover;
 }
 
-.landing .content_landing{
+.landing .content_landing {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.landing .content_landing .button_utils button{
-    margin: 10px 16px;
+.landing .content_landing .button_utils button {
+  margin: 10px 16px;
 }
 
 
 /*section page*/
-.section{
+.section {
   margin: 32px 0px;
   position: relative;
 }
 
-.brand{
+.brand {
   margin: 140px 54px 0px 54px;
   font-size: 2.4vmin;
 }
 
-.section .brand_one .illustration{
+.section .brand_one .illustration {
   position: relative;
 }
 
-.image_brand_one{
+.image_brand_one {
   border-radius: 32px;
 }
 
-.brand_two{
+.brand_two {
   margin: 180px 0px 0px 0px;
 }
-.brand_two .description_about{
+
+.brand_two .description_about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,15 +69,16 @@ html{
   background: url("../../assets/images/about_bg.png") no-repeat fixed center bottom;
   background-size: cover;
 }
-.brand_two .description_about p{
+
+.brand_two .description_about p {
   width: 68%;
   text-align: center;
   font-size: 2.6vmin;
 }
 
-.brand_three .question_faq .faq_content{
+.brand_three .question_faq .faq_content {
   background-color: #e6e6e8;
-  color: #001822;
+  color: #1d1d1e;
   border-radius: 18px;
   padding: 5px 0px;
   margin: 8px 0px;
@@ -85,19 +87,21 @@ html{
 
 /*Responsive*/
 /*extra small*/
-@media only screen and (min-width: 100px){
-  .section .brand_one .illustration{
+@media only screen and (min-width: 100px) {
+  .section .brand_one .illustration {
     height: 8vh;
     top: -60px;
     left: -56px;
   }
-  .illustration .background_ph{
+
+  .illustration .background_ph {
     display: block;
     position: absolute;
     height: 26vmin;
     width: 26vw;
   }
-  .illustration .disque_ph{
+
+  .illustration .disque_ph {
     display: block;
     position: absolute;
     height: 28vmin;
@@ -106,7 +110,8 @@ html{
     top: 0px;
     left: 0px;
   }
-  .illustration .album_ph{
+
+  .illustration .album_ph {
     display: block;
     position: absolute;
     height: 24vmin;
@@ -116,40 +121,46 @@ html{
     z-index: 3;
     transform: rotate(-16deg);
   }
-  .section .brand_one{
+
+  .section .brand_one {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   /*FAQ*/
-  .brand_three{
+  .brand_three {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .brand_three .question_faq{
+
+  .brand_three .question_faq {
     display: flex;
     flex-direction: column;
   }
-  .brand_three .question_faq .faq_content{
+
+  .brand_three .question_faq .faq_content {
     width: 100%;
   }
 }
 
 /*small*/
-@media only screen and (min-width: 600px){
-  .section .brand_one .illustration{
+@media only screen and (min-width: 600px) {
+  .section .brand_one .illustration {
     height: 300px;
     top: 0px;
     left: -80px;
   }
-  .illustration .background_ph{
+
+  .illustration .background_ph {
     display: block;
     position: absolute;
     height: 26vmin;
     width: 24vw;
   }
-  .illustration .disque_ph{
+
+  .illustration .disque_ph {
     display: block;
     position: absolute;
     height: 28vmin;
@@ -158,7 +169,8 @@ html{
     top: 0px;
     left: -8px;
   }
-  .illustration .album_ph{
+
+  .illustration .album_ph {
     display: block;
     position: absolute;
     height: 24vmin;
@@ -171,17 +183,19 @@ html{
 }
 
 /*medium*/
-@media only screen and (min-width: 900px){
-  .section .brand_one .illustration{
+@media only screen and (min-width: 900px) {
+  .section .brand_one .illustration {
     height: 400px;
   }
-  .illustration .background_ph{
+
+  .illustration .background_ph {
     display: block;
     position: absolute;
     height: 36vh;
     width: 26vw;
   }
-  .illustration .disque_ph{
+
+  .illustration .disque_ph {
     display: block;
     position: absolute;
     height: 44vh;
@@ -190,7 +204,8 @@ html{
     top: -28px;
     left: 0px;
   }
-  .illustration .album_ph{
+
+  .illustration .album_ph {
     display: block;
     position: absolute;
     height: 36vh;
@@ -200,23 +215,25 @@ html{
     z-index: 3;
     transform: rotate(-16deg);
   }
-  .brand{
+
+  .brand {
     /*margin: 180px 94px 0px 94px;*/
   }
 
-  .section .brand_one{
+  .section .brand_one {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .brand_one .description_brand{
+  .brand_one .description_brand {
     position: relative;
     top: -82px;
     height: 60vh;
     width: 40vw;
   }
-  .description_brand .info_description_brand{
+
+  .description_brand .info_description_brand {
     position: relative;
     top: -82px;
     left: 146px;
@@ -230,18 +247,20 @@ html{
 }
 
 /*desktop*/
-@media only screen and (min-width: 1400px){
-  .section .brand_one .illustration{
+@media only screen and (min-width: 1400px) {
+  .section .brand_one .illustration {
     height: 400px;
   }
-  .illustration .background_ph{
+
+  .illustration .background_ph {
     display: block;
     position: absolute;
     height: 42vmin;
     width: 20vw;
     left: 32px;
   }
-  .illustration .disque_ph{
+
+  .illustration .disque_ph {
     display: block;
     position: absolute;
     height: 48vmin;
@@ -250,7 +269,8 @@ html{
     top: -24px;
     left: 0px;
   }
-  .illustration .album_ph{
+
+  .illustration .album_ph {
     display: block;
     position: absolute;
     height: 42vmin;
@@ -260,32 +280,38 @@ html{
     z-index: 3;
     transform: rotate(-16deg);
   }
-  .brand{
+
+  .brand {
     margin: 180px 54px 0px 54px;
   }
-  .section .brand_one{
+
+  .section .brand_one {
     justify-content: space-around;
   }
-  .description_brand .info_description_brand{
+
+  .description_brand .info_description_brand {
     position: relative;
     top: -122px;
     left: 76px;
     width: 100%;
   }
-    /*FAQ*/
-  .brand_three{
+
+  /*FAQ*/
+  .brand_three {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .brand_three .question_faq{
+
+  .brand_three .question_faq {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .brand_three .question_faq .faq_content{
-    width: 30%;
+
+  .brand_three .question_faq .faq_content {
+    width: 27%;
+    padding: 25px;
   }
 }
-
