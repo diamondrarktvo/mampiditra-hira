@@ -66,13 +66,14 @@ function Home() {
               <img className='image_brand_one album_ph' src={album_ph} alt="album" />
             </div>
             <div className='description_brand'> 
-                <TitleCustom title="Music" />
+                <TitleCustom title="Music" /> 
                 <div className='info_description_brand'>
                   <h1>Download latest song or album</h1>
                   <p>ENostrud minim consectetur nisi Lorem cillum minim do. Magna mollit elit eiusmod ex cupidatat adipisicing dolore. In cillum eiusmod laborum proident anim non quis voluptate aliquip dolore quis. Qui ipsum duis officia est anim fugiat. Veniam tempor qui cillum adipisicing qui qui ea labore id eiusmod reprehenderit sunt.</p>
                   <Link to="/telechargement">
                     <button>Télecharger</button>
                   </Link>
+                  <i className="">no spinner but why</i>
                 </div>
             </div>
           </div>
