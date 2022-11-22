@@ -73,7 +73,6 @@ function Home() {
                   <Link to="/telechargement">
                     <button>Télecharger</button>
                   </Link>
-                  <i className="">no spinner but why</i>
                 </div>
             </div>
           </div>
@@ -89,15 +88,15 @@ function Home() {
               <TitleCustom title="FAQ" />
               <div className='question_faq'>
                   <div className='faq_content' style={{transform:`rotate(${degre[0]}deg)`}}>
-                    <h3>Question 1 ?</h3>
+                    <h3>Question 1<i class="fa fa-question"></i> </h3>
                     <p>Amet incididunt in commodo fugiat.</p>
                   </div>
                   <div className='faq_content' style={{transform:`rotate(${degre[1]}deg)`}}>
-                    <h3>Question 2 ?</h3>
+                    <h3>Question 2 <i class="fa fa-question"></i></h3>
                     <p>Veniam non adipisicing cupidatat culpa consequat ipsum fugiat voluptate ullamco. Nostrud mollit dolore nisi eu nisi id nostrud enim amet ea incididunt. Aliquip est do non cupidatat. Proident id sit ea dolor duis eiusmod. Proident sint ipsum aute ex ullamco dolore dolore dolore do nulla ullamco do aliquip est. Proident pariatur mollit deserunt nulla eiusmod fugiat officia et sit nisi qui nisi ad proident.</p>
                   </div>
                   <div className='faq_content' style={{transform:`rotate(${degre[2]}deg)`}}>
-                    <h3>Question 3 ?</h3>
+                    <h3>Question 3 <i class="fa fa-question"></i></h3>
                     <p>Ut velit consequat ut nulla ea mollit.</p>
                   </div>
               </div>
