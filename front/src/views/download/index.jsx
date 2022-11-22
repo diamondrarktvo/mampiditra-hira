@@ -2,6 +2,7 @@ import React from "react";
 import {HashLink} from 'react-router-hash-link';
 import BackgroundSlideshow from 'react-background-slideshow';
 import './download.css';
+import {Result} from "../../components";
 
 import logo_gif from "../../assets/images/logo.gif"
 import alb_1 from '../../assets/images/album/dadju_album.png';
@@ -31,6 +32,19 @@ function Download (){
                    <div className="instruction_search">
                         <p>En appuyant sur "Rechercher", vous confirmez votre consentement à nos <Link to="/term-of-use" className="term_of_use">Conditions d'utilisation.</Link></p>
                    </div>
+                </div>
+                <div className="div_result">
+                    <div className="information_result">
+                        <p>                       
+                            Vous trouverez ici tous les résultats de recherche pour votre requête de recherche "test". Nous avons trouvé 25 résultats correspondants.
+                            Vous avez maintenant la possibilité d'écouter chaque résultat avant de le télécharger. Si vous le souhaitez, cliquez sur le bouton "Play".
+                        </p>
+                    </div>
+                    <div className="all_result_from_search">
+                        <Result titre="KI im Test | Doku HD | ARTE" source="MiniminterClips Bitrate" urlVideo="" />
+                        <Result titre="KRIPP PASSES MONTHLY APM TEST!!! - Hearthstone Battlegrounds" source="Kripparrian Bitrate" urlVideo="" />
+                        <Result titre="North Korea test-fires intercontinental ballistic missile l GMA" source="ABC News Bitrate" urlVideo="" />
+                    </div>
                 </div>
             </div>
         </div>
