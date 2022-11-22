@@ -46,6 +46,14 @@ function Download (){
                         <Result titre="North Korea test-fires intercontinental ballistic missile l GMA" source="ABC News Bitrate" urlVideo="" />
                     </div>
                 </div>
+                <div className="latest_music">
+                    <div>
+                        <p><i className="fa fa-bomb"></i>     Vous pouvez retrouvez ici les derniers nouveautés.    <i className="fa fa-bomb"></i></p>
+                    </div>
+                    <Link to="/latest-music">
+                        <button><i className="fa fa-music"></i> latest music</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )
