@@ -15,7 +15,7 @@ import background_ph from '../../assets/images/backgroun_alb.png';
 
 function Home() {
   const [screenWidth, setScreenWidth] = useState(getWindowWidth()) //utile pour responsive faq
-  const degre = screenWidth >= 1400 ? [-16, 8, 13] : [0, 0, 0];
+  const degre = screenWidth >= 1400 ? [-16, 4, 13] : [0, 0, 0];
 
   /*Effet pour surveiller si l'écran a rediminuer ou élargit*/
   useEffect(() => {
