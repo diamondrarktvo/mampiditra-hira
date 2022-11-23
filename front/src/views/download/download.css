@@ -141,7 +141,24 @@
    }
 }
 
-@media only screen and (min-width: 140px) {
+@media only screen and (max-width: 420px) {
+   .section_download .div_bar_search .bar_search input {
+      width: 56vmin;
+      height: 65px;
+   }
+   .div_bar_search .bar_search .icon_search {
+      background-color: white;
+      color: #1d1d1e;
+      width: 7vmin;
+      height: 57px;
+      font-size: 22px;
+   }
+   .div_bar_search .bar_search .icon_search i {
+      margin: 15px 0px;
+   }
+}
+
+@media only screen and (min-width: 421px) {
    .section_download .div_bar_search .bar_search input {
       width: 56vmin;
       height: 65px;
