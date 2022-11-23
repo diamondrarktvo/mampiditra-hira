@@ -9,14 +9,9 @@ import {
 } from '../../redux/actions/action_creators';
 
 function Result({ titre, source, urlVideo, id }) {
-   const isPlaying = useSelector(
-      (selector) => selector.resultat.streaming.playing
-   );
-   const isDownload = useSelector(
-      (selector) => selector.resultat.downloading.download
-   );
+   const streaming = useSelector((selector) => selector.resultat.streaming);
+   const downloading = useSelector((selector) => selector.resultat.downloading);
    const dispatch = useDispatch();
-
    return (
       <div className="container_result">
          <div className="one_item_result">
@@ -28,14 +23,18 @@ function Result({ titre, source, urlVideo, id }) {
                      dispatch(beforeDownload(id));
                   }}
                >
-                  {isDownload ? 'Close' : 'Download'}
+                  {downloading.download && downloading.idVideoToDownload === id
+                     ? 'Close'
+                     : 'Download'}
                </button>
                <button
                   onClick={() => {
                      dispatch(playPauseVideo(id));
                   }}
                >
-                  {isPlaying ? 'Stop' : 'Play'}
+                  {streaming.playing && streaming.idVideoToPlay === id
+                     ? 'Stop'
+                     : 'Play'}
                </button>
             </div>
          </div>
