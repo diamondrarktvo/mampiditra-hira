@@ -1,11 +1,20 @@
 import React /*useState*/ from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './Result.css';
 
 //action créators
-import { playPauseVideo } from '../../redux/actions/action_creators';
+import {
+   playPauseVideo,
+   beforeDownload,
+} from '../../redux/actions/action_creators';
 
 function Result({ titre, source, urlVideo, id }) {
+   const isPlaying = useSelector(
+      (selector) => selector.resultat.streaming.playing
+   );
+   const isDownload = useSelector(
+      (selector) => selector.resultat.downloading.download
+   );
    const dispatch = useDispatch();
 
    return (
@@ -14,13 +23,19 @@ function Result({ titre, source, urlVideo, id }) {
             <h4>{titre}</h4>
             <p>Source: YouTube • Channel:{source}: 192 kbps</p>
             <div className="bouttons">
-               <button>Download</button>
+               <button
+                  onClick={() => {
+                     dispatch(beforeDownload(id));
+                  }}
+               >
+                  {isDownload ? 'Close' : 'Download'}
+               </button>
                <button
                   onClick={() => {
                      dispatch(playPauseVideo(id));
                   }}
                >
-                  Play
+                  {isPlaying ? 'Stop' : 'Play'}
                </button>
             </div>
          </div>

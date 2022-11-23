@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 
 function Download() {
    const streaming = useSelector((selector) => selector.resultat.streaming);
+   const downloading = useSelector((selector) => selector.resultat.downloading);
    return (
       <div className="container_download">
          <div className="landing_download">
@@ -75,6 +76,12 @@ function Download() {
                            urlVideo={one_result.urlVideo}
                            id={one_result.id}
                         />
+                        {downloading.download &&
+                           downloading.idVideoToDownload === one_result.id && (
+                              <div className="container_button_download">
+                                 <p>Teste pour downloader</p>
+                              </div>
+                           )}
                      </Fragment>
                   ))}
                </div>
