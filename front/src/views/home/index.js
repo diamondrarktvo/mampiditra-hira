@@ -14,23 +14,25 @@ import background_ph from '../../assets/images/backgroun_alb.png';
 
 
 function Home() {
-  const [screenWidth, setScreenWidth] = useState(getWindowWidth()) //utile pour responsive faq
+  const [screenWidth, setScreenWidth] = useState(getWindowSize()) //utile pour responsive faq
+  const [screenHeight, setScreenHeight] = useState(getWindowSize()) //utile pour afficher le boutton up
   const degre = screenWidth >= 1400 ? [-16, 8, 13] : [0, 0, 0];
-
+  console.log(screenHeight);
   /*Effet pour surveiller si l'écran a rediminuer ou élargit*/
   useEffect(() => {
-    function onHandleWindowWidth(){
-      setScreenWidth(getWindowWidth());
+    function onHandleWindowSize(){
+      setScreenWidth(getWindowSize());
+      setScreenHeight(getWindowSize())
     }
-    window.addEventListener('resize', onHandleWindowWidth);
+    window.addEventListener('resize', onHandleWindowSize);
     return() => {
-      window.addEventListener('resize', onHandleWindowWidth);
+      window.addEventListener('resize', onHandleWindowSize);
     }
   })
   /*Get le width de l'écran*/
-  function getWindowWidth (){
-    const {innerWidth,} = window;
-    return innerWidth
+  function getWindowSize (){
+    const {innerWidth,innerHeight} = window;
+    return {innerWidth, innerHeight}
   }
   return (
     <div className="Home" id="home">
