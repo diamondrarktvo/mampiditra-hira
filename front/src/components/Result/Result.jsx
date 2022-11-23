@@ -23,7 +23,7 @@ function Result({ titre, source, urlVideo, id }) {
                      dispatch(beforeDownload(id));
                   }}
                >
-                  {downloading.download && downloading.idVideoToDownload === id
+                  {downloading.download && downloading.idVideoToDownload === id //on teste si c'est vraiment cqu'on clique
                      ? 'Close'
                      : 'Download'}
                </button>
