@@ -115,6 +115,7 @@
 @media only screen and (min-width: 100px){
     .landing_download button{
         font-size: 2.4vmin;
+        height: 96px;
     }
     .div_bar_search .bar_search .icon_search{
         padding: 4px 0px;
@@ -125,13 +126,13 @@
 @media only screen and (min-width: 140px){
     .section_download .div_bar_search .bar_search input{
         width: 56vmin;
-        height: 7vh;
+        height: 65px;
     }
     .div_bar_search .bar_search .icon_search{
         background-color: white;
         color: #1d1d1e;
         width: 7vmin;
-        height: 6vh;
+        height:57px;
         font-size:  34px;
     }
 }
