@@ -12,6 +12,7 @@ import alb_2 from '../../assets/images/album/illustr_music_4.jpg';
 import alb_3 from '../../assets/images/album/illustr_music.jpg';
 import alb_4 from '../../assets/images/album/illustr_music_2.jpg';
 import alb_5 from '../../assets/images/album/illustr_music_3.jpg';
+import video_link from '../../assets/videos/video_1.mp4';
 import { Link } from 'react-router-dom';
 
 function Download() {
@@ -67,7 +68,10 @@ function Download() {
                         {streaming.playing &&
                            streaming.idVideoToPlay === one_result.id && (
                               <div className="container_video_playing">
-                                 <p>Teste pour visualiser la vidéo</p>
+                                 <video width="520" height="280" controls>
+                                    <source src={video_link} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                 </video>
                               </div>
                            )}
                         <Result
