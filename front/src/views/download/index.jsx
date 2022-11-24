@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import BackgroundSlideshow from 'react-background-slideshow';
 import { useSelector } from 'react-redux';
@@ -18,6 +18,12 @@ import { Link } from 'react-router-dom';
 function Download() {
    const streaming = useSelector((selector) => selector.resultat.streaming);
    const downloading = useSelector((selector) => selector.resultat.downloading);
+   const [motCleSearch, setMotCleSearch] = useState(null);
+
+   const onHandleChangeInput = (e) => {
+      let value_input_search = e.target.value;
+      setMotCleSearch(value_input_search);
+   };
    return (
       <div className="container_download">
          <div className="landing_download">
@@ -36,6 +42,7 @@ function Download() {
                      type="text"
                      id="bar_de_recherche"
                      placeholder="Entrer votre clé ici..."
+                     onChange={(e) => onHandleChangeInput(e)}
                   />
                   <div className="icon_search">
                      <i className="fa fa-search"></i>
@@ -52,16 +59,19 @@ function Download() {
                </div>
             </div>
             <div className="div_result">
-               <div className="information_result">
-                  <p>
-                     Vous trouverez ici tous les résultats de recherche pour
-                     votre requête de recherche "test". Nous avons trouvé 25
-                     résultats correspondants. Vous avez maintenant la
-                     possibilité d'écouter chaque résultat avant de le
-                     télécharger. Si vous le souhaitez, cliquez sur le bouton
-                     "Play".
-                  </p>
-               </div>
+               {mockData && (
+                  <div className="information_result">
+                     <p>
+                        Vous trouverez ici tous les résultats de recherche pour
+                        votre requête de recherche "
+                        {motCleSearch ?? motCleSearch}
+                        ". Nous avons trouvé 25 résultats correspondants. Vous
+                        avez maintenant la possibilité d'écouter chaque résultat
+                        avant de le télécharger. Si vous le souhaitez, cliquez
+                        sur le bouton "Play".
+                     </p>
+                  </div>
+               )}
                <div className="all_result_from_search">
                   {mockData.map((one_result) => (
                      <Fragment key={one_result.id}>
@@ -70,7 +80,7 @@ function Download() {
                               <div className="container_video_playing">
                                  <video width="520" height="280" controls>
                                     <source src={video_link} type="video/mp4" />
-                                    Your browser does not support the video tag.
+                                    Votre navigateur ne supporte pas.
                                  </video>
                               </div>
                            )}
