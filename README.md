@@ -7,5 +7,8 @@
   <img src="screenshoots/mp3gasy.png" />
 </p>
 <p align="center">
+  <img src="screenshoots/download_page.png" />
+</p>
+<p align="center">
   <img src="screenshoots/error.png" />
 </p>
