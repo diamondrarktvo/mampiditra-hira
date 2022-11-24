@@ -13,30 +13,40 @@ import background_ph from '../../assets/images/backgroun_alb.png';
 
 function Home() {
    const [screenWidth, setScreenWidth] = useState(getWindowSize().innerWidth); //utile pour responsive faq
-   const [screenHeight, setScreenHeight] = useState(getWindowSize()); //utile pour afficher le boutton up
+   const [screenHeight, setScreenHeight] = useState(0); //utile pour afficher le boutton up
    const degre = screenWidth >= 1400 ? [-16, 8, 13] : [0, 0, 0];
-   console.log('dama log :');
+
    /*Effet pour surveiller si l'écran a rediminuer ou élargit*/
    useEffect(() => {
       function onHandleWindowSize() {
          setScreenWidth(getWindowSize().innerWidth);
-         setScreenHeight(getWindowSize().innerHeight);
       }
       window.addEventListener('resize', onHandleWindowSize);
       return () => {
          window.addEventListener('resize', onHandleWindowSize);
       };
    });
+
    /*Get le width de l'écran*/
    function getWindowSize() {
-      const { innerWidth, innerHeight } = window;
-      return { innerWidth, innerHeight };
+      const { innerWidth } = window;
+      return { innerWidth };
    }
+
+   /*detect if user scroll page*/
+   window.addEventListener('scroll', (e) => {
+      setScreenHeight(window.scrollY);
+   });
+
    return (
       <div className="Home" id="home">
-         <HashLink to="/#home">
-            <div className="goToTop">Up</div>
-         </HashLink>
+         {screenHeight >= 200 && (
+            <HashLink to="/#home">
+               <div className="goToTop">
+                  <i className="fa fa-solid fa-arrow-up"></i>
+               </div>
+            </HashLink>
+         )}
          <div className="landing">
             <div className="content_landing">
                <h1 style={{ fontSize: '4.5vmin' }}>MP3 DOWNLOADER GASY</h1>
