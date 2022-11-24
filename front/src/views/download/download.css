@@ -121,13 +121,31 @@
 }
 
 .all_result_from_search .container_button_download {
-   min-height: 220px;
+   text-align: center;
+   min-height: 180px;
    font-size: 2vmin;
    font-weight: 600;
    width: 54vmin;
    background-color: white;
    color: #1d1d1e;
    padding: 5px 4px;
+}
+
+.all_result_from_search .container_button_download p {
+   font-size: 12px;
+   margin: 15px 8px;
+   background-color: #e6e6e8;
+   border-radius: 12px;
+}
+
+.all_result_from_search .container_button_download .bouton_to_download {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.all_result_from_search .container_button_download .bouton_to_download button {
+   color: white;
+   padding: 18px;
 }
 
 @media only screen and (min-width: 100px) {
@@ -155,6 +173,13 @@
    }
    .div_bar_search .bar_search .icon_search i {
       margin: 15px 0px;
+   }
+   .all_result_from_search
+      .container_button_download
+      .bouton_to_download
+      button {
+      padding: 8px;
+      font-size: 10px;
    }
 }
 

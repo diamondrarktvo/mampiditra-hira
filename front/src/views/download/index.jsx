@@ -7,8 +7,8 @@ import { Result } from '../../components';
 import { mockData } from '../../utils';
 
 import logo_gif from '../../assets/images/logo.gif';
-import alb_1 from '../../assets/images/album/dadju_album.png';
-import alb_2 from '../../assets/images/album/gims_album.webp';
+import alb_1 from '../../assets/images/album/illustr_music_1.jpg';
+import alb_2 from '../../assets/images/album/illustr_music_4.jpg';
 import alb_3 from '../../assets/images/album/illustr_music.jpg';
 import alb_4 from '../../assets/images/album/illustr_music_2.jpg';
 import alb_5 from '../../assets/images/album/illustr_music_3.jpg';
@@ -79,7 +79,27 @@ function Download() {
                         {downloading.download &&
                            downloading.idVideoToDownload === one_result.id && (
                               <div className="container_button_download">
-                                 <p>Teste pour downloader</p>
+                                 <h3 style={{ fontSize: '14px' }}>
+                                    {one_result.titre}
+                                 </h3>
+                                 <p>
+                                    <i className="fa fa-music"></i> Le fichier
+                                    est prêt. Veuillez cliquer sur le bouton de
+                                    téléchargement pour lancer le
+                                    téléchargement.
+                                 </p>
+                                 <div className="bouton_to_download">
+                                    <button
+                                       style={{ backgroundColor: '#a8cf45' }}
+                                    >
+                                       Download MP3
+                                    </button>
+                                    <button
+                                       style={{ backgroundColor: '#0098da' }}
+                                    >
+                                       Download MP4
+                                    </button>
+                                 </div>
                               </div>
                            )}
                      </Fragment>
