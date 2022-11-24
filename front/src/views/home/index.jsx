@@ -12,15 +12,15 @@ import album_ph from '../../assets/images/forgotten_alb.jpeg';
 import background_ph from '../../assets/images/backgroun_alb.png';
 
 function Home() {
-   const [screenWidth, setScreenWidth] = useState(getWindowSize()); //utile pour responsive faq
+   const [screenWidth, setScreenWidth] = useState(getWindowSize().innerWidth); //utile pour responsive faq
    const [screenHeight, setScreenHeight] = useState(getWindowSize()); //utile pour afficher le boutton up
    const degre = screenWidth >= 1400 ? [-16, 8, 13] : [0, 0, 0];
-   console.log(screenHeight);
+   console.log('dama log :');
    /*Effet pour surveiller si l'écran a rediminuer ou élargit*/
    useEffect(() => {
       function onHandleWindowSize() {
-         setScreenWidth(getWindowSize());
-         setScreenHeight(getWindowSize());
+         setScreenWidth(getWindowSize().innerWidth);
+         setScreenHeight(getWindowSize().innerHeight);
       }
       window.addEventListener('resize', onHandleWindowSize);
       return () => {
@@ -122,18 +122,14 @@ function Home() {
                      className="faq_content"
                      style={{ transform: `rotate(${degre[0]}deg)` }}
                   >
-                     <h3>
-                        Question 1<i className="fa fa-question"></i>{' '}
-                     </h3>
+                     <h3>Question 1 ?</h3>
                      <p>Amet incididunt in commodo fugiat.</p>
                   </div>
                   <div
                      className="faq_content"
                      style={{ transform: `rotate(${degre[1]}deg)` }}
                   >
-                     <h3>
-                        Question 2 <i className="fa fa-question"></i>
-                     </h3>
+                     <h3>Question 2 ?</h3>
                      <p>
                         Veniam non adipisicing cupidatat culpa consequat ipsum
                         fugiat voluptate ullamco. Nostrud mollit dolore nisi eu
@@ -149,9 +145,7 @@ function Home() {
                      className="faq_content"
                      style={{ transform: `rotate(${degre[2]}deg)` }}
                   >
-                     <h3>
-                        Question 3 <i className="fa fa-question"></i>
-                     </h3>
+                     <h3>Question 3 ?</h3>
                      <p>Ut velit consequat ut nulla ea mollit.</p>
                   </div>
                </div>
