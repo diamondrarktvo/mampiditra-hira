@@ -22,9 +22,11 @@ html {
    bottom: 16px;
    z-index: 5;
    right: 24px;
+   height: 46px;
+   width: 46px;
    border-radius: 64px;
    font-size: 3.8vmin;
-   padding: 16px;
+   padding: 18px;
    background-color: white;
    color: #001822;
 }
