@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 
 const musicRoutes = require('./routes/musicRouter');
@@ -19,6 +20,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/api/musics', musicRoutes);
+app.use('/api/v1/musics', musicRoutes);
 
 module.exports = app;

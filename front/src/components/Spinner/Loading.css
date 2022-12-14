@@ -1,0 +1,62 @@
+/*spinner*/
+
+.spinner {
+   margin: 0px 200px;
+   width: 80px;
+   height: 40px;
+}
+
+.spinner > div {
+   background: #0098da;
+   height: 100%;
+   width: 10px;
+   float: left;
+   margin: 0 1px;
+   animation: stretch 2s infinite;
+   animation-timing-function: cubic-bezier(0.62, 0.28, 0.23, 0.99);
+}
+
+.spinner .r1 {
+   animation-delay: -1s;
+}
+
+.spinner .r2 {
+   animation-delay: -0.9s;
+}
+
+.spinner .r3 {
+   animation-delay: -0.8s;
+}
+
+.spinner .r4 {
+   animation-delay: -0.7s;
+}
+
+.spinner .r5 {
+   animation-delay: -0.6s;
+}
+
+@keyframes stretch {
+   0%,
+   20%,
+   49% {
+      transform: scaleY(0.4);
+      background-color: #0098da;
+   }
+
+   10% {
+      transform: scaleY(1);
+   }
+
+   50%,
+   70%,
+   100% {
+      transform: scaleY(0.4);
+      background-color: #649129;
+   }
+
+   60% {
+      transform: scaleY(1);
+      background-color: #649129;
+   }
+}
