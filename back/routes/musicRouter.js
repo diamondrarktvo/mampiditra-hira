@@ -4,6 +4,6 @@ const router = express.Router();
 
 const musicController = require('../controllers/musicController');
 
-router.get('/', musicController.searchMusic);
+router.post('/search', musicController.searchMusic);
 
 module.exports = router;

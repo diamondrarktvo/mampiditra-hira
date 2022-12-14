@@ -1,10 +1,12 @@
 import React, { Fragment, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import BackgroundSlideshow from 'react-background-slideshow';
 import { useSelector } from 'react-redux';
 import './download.css';
 import { Result } from '../../components';
-import { mockData } from '../../utils';
+import { MusicService } from '../../services';
+import { Loading } from '../../components';
 
 import logo_gif from '../../assets/images/logo.gif';
 import alb_1 from '../../assets/images/album/illustr_music_1.jpg';
@@ -12,18 +14,32 @@ import alb_2 from '../../assets/images/album/illustr_music_4.jpg';
 import alb_3 from '../../assets/images/album/illustr_music.jpg';
 import alb_4 from '../../assets/images/album/illustr_music_2.jpg';
 import alb_5 from '../../assets/images/album/illustr_music_3.jpg';
-import video_link from '../../assets/videos/video_1.mp4';
-import { Link } from 'react-router-dom';
 
 function Download() {
    const streaming = useSelector((selector) => selector.resultat.streaming);
    const downloading = useSelector((selector) => selector.resultat.downloading);
    const [motCleSearch, setMotCleSearch] = useState(null);
+   const [allResultFromSearch, setAllResultFromSearch] = useState([]);
+   const [isSearching, setIsSearching] = useState(false);
 
    const onHandleChangeInput = (e) => {
       let value_input_search = e.target.value;
       setMotCleSearch(value_input_search);
    };
+
+   const searching = async () => {
+      setIsSearching(true);
+      let result = await MusicService.searchVideoByWord(motCleSearch).then(
+         (res) => {
+            setIsSearching(false);
+            return res.data;
+         }
+      );
+      setAllResultFromSearch(result);
+   };
+
+   console.log(allResultFromSearch);
+
    return (
       <div className="container_download">
          <div className="landing_download">
@@ -45,7 +61,10 @@ function Download() {
                      onChange={(e) => onHandleChangeInput(e)}
                   />
                   <div className="icon_search">
-                     <i className="fa fa-search"></i>
+                     <i
+                        className="fa fa-search"
+                        onClick={() => searching()}
+                     ></i>
                   </div>
                </div>
                <div className="instruction_search">
@@ -59,42 +78,47 @@ function Download() {
                </div>
             </div>
             <div className="div_result">
-               {mockData && (
+               {allResultFromSearch.length !== 0 && (
                   <div className="information_result">
                      <p>
                         Vous trouverez ici tous les résultats de recherche pour
                         votre requête de recherche "
                         {motCleSearch ?? motCleSearch}
-                        ". Nous avons trouvé 25 résultats correspondants. Vous
-                        avez maintenant la possibilité d'écouter chaque résultat
-                        avant de le télécharger. Si vous le souhaitez, cliquez
-                        sur le bouton "Play".
+                        ". Nous avons trouvé {allResultFromSearch.length}{' '}
+                        résultats correspondants. Vous avez maintenant la
+                        possibilité d'écouter chaque résultat avant de le
+                        télécharger. Si vous le souhaitez, cliquez sur le bouton
+                        "Play".
                      </p>
                   </div>
                )}
+               {isSearching && <Loading />}
                <div className="all_result_from_search">
-                  {mockData.map((one_result) => (
-                     <Fragment key={one_result.id}>
+                  {allResultFromSearch.map((one_result) => (
+                     <Fragment key={one_result.etag}>
                         {streaming.playing &&
-                           streaming.idVideoToPlay === one_result.id && (
+                           streaming.idVideoToPlay ===
+                              one_result.id.videoId && (
                               <div className="container_video_playing">
-                                 <video width="520" height="280" controls>
-                                    <source src={video_link} type="video/mp4" />
-                                    Votre navigateur ne supporte pas.
-                                 </video>
+                                 <iframe
+                                    width="340"
+                                    height="280"
+                                    src={`https://www.youtube.com/embed/${one_result.id.videoId}`}
+                                 ></iframe>
                               </div>
                            )}
                         <Result
-                           titre={one_result.titre}
-                           source={one_result.source}
-                           urlVideo={one_result.urlVideo}
-                           id={one_result.id}
+                           titre={one_result.snippet.title}
+                           source={one_result.snippet.channelTitle}
+                           urlVideo={`https://www.youtube.com/watch?v=${one_result.id.videoId}`}
+                           id={one_result.id.videoId}
                         />
                         {downloading.download &&
-                           downloading.idVideoToDownload === one_result.id && (
+                           downloading.idVideoToDownload ===
+                              one_result.id.videoId && (
                               <div className="container_button_download">
                                  <h3 style={{ fontSize: '14px' }}>
-                                    {one_result.titre}
+                                    {one_result.snippet.title}
                                  </h3>
                                  <p>
                                     <i className="fa fa-music"></i> Le fichier
