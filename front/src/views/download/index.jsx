@@ -30,14 +30,16 @@ function Download() {
    };
 
    const searching = async () => {
-      setIsSearching(true);
-      let result = await MusicService.searchVideoByWord(motCleSearch).then(
-         (res) => {
-            setIsSearching(false);
-            return res.data;
-         }
-      );
-      setAllResultFromSearch(result);
+      if (motCleSearch !== null) {
+         setIsSearching(true);
+         let result = await MusicService.searchVideoByWord(motCleSearch).then(
+            (res) => {
+               setIsSearching(false);
+               return res.data;
+            }
+         );
+         setAllResultFromSearch(result);
+      }
    };
 
    const convertSong = async (idVideo) => {
