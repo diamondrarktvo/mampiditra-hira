@@ -138,12 +138,14 @@
    border-radius: 12px;
 }
 
-.all_result_from_search .container_button_download .bouton_to_download {
+.bouton_to_convert,
+.bouton_to_download {
    display: flex;
    justify-content: space-evenly;
 }
 
-.all_result_from_search .container_button_download .bouton_to_download button {
+.bouton_to_download button,
+.bouton_to_convert button {
    color: white;
    padding: 18px;
 }
@@ -174,9 +176,10 @@
    .div_bar_search .bar_search .icon_search i {
       margin: 15px 0px;
    }
+   .all_result_from_search .container_button_download .bouton_to_download,
    .all_result_from_search
       .container_button_download
-      .bouton_to_download
+      .bouton_to_convert
       button {
       padding: 8px;
       font-size: 10px;
