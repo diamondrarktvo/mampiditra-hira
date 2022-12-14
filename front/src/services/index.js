@@ -14,6 +14,13 @@ function searchVideoByWord(search) {
    );
 }
 
+function convertToMp3(idVideoYoutube) {
+   return RouteAxios.post('/convert', {
+      idVideoYoutube,
+   });
+}
+
 export const MusicService = {
    searchVideoByWord,
+   convertToMp3,
 };

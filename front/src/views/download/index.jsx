@@ -21,6 +21,8 @@ function Download() {
    const [motCleSearch, setMotCleSearch] = useState(null);
    const [allResultFromSearch, setAllResultFromSearch] = useState([]);
    const [isSearching, setIsSearching] = useState(false);
+   const [isConvert, setIsConvert] = useState(false);
+   const [linkToDownload, setLinkToDownload] = useState(null);
 
    const onHandleChangeInput = (e) => {
       let value_input_search = e.target.value;
@@ -38,7 +40,13 @@ function Download() {
       setAllResultFromSearch(result);
    };
 
-   console.log(allResultFromSearch);
+   const convertSong = async (idVideo) => {
+      setIsConvert(true);
+      await MusicService.convertToMp3(idVideo).then((res) => {
+         setLinkToDownload(res.data.link);
+         setIsConvert(false);
+      });
+   };
 
    return (
       <div className="container_download">
@@ -124,14 +132,32 @@ function Download() {
                                  <p>
                                     <i className="fa fa-music"></i> Le fichier
                                     est prêt. Veuillez cliquer sur le bouton de
-                                    téléchargement pour lancer le
+                                    conversion puis download pour lancer le
                                     téléchargement.
                                  </p>
-                                 <div className="bouton_to_download">
-                                    <button
-                                       style={{ backgroundColor: '#a8cf45' }}
+                                 {linkToDownload !== null && (
+                                    <a
+                                       className="bouton_to_download"
+                                       href={linkToDownload}
+                                       style={{ marginBottom: '8px' }}
                                     >
-                                       Download MP3
+                                       <button
+                                          style={{ backgroundColor: '#a8cf45' }}
+                                       >
+                                          Download
+                                       </button>
+                                    </a>
+                                 )}
+                                 <div className="bouton_to_convert">
+                                    <button
+                                       style={{ backgroundColor: '#0098da' }}
+                                       onClick={() =>
+                                          convertSong(one_result.id.videoId)
+                                       }
+                                    >
+                                       {isConvert
+                                          ? 'Conversion...'
+                                          : 'Convert to MP3'}
                                     </button>
                                     <button
                                        style={{ backgroundColor: '#0098da' }}
