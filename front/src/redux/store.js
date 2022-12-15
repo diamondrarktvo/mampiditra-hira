@@ -6,7 +6,7 @@ const reduxDevTools =
 
 export const store = createStore(reducer, reduxDevTools);
 
-store.subscribe(() => {
+/*store.subscribe(() => {
    console.log("State ato amin'ny store : ");
    console.log(store.getState());
-});
+});*/
