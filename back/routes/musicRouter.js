@@ -4,7 +4,6 @@ const router = express.Router();
 
 const musicController = require('../controllers/musicController');
 
-router.get('/', musicController.welcome);
 router.post('/search', musicController.searchMusic);
 router.post('/convert', musicController.downloadMP3);
 
