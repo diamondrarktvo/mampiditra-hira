@@ -80,7 +80,7 @@
 
 .div_bar_search .instruction_search {
    margin: 0px;
-   font-size: 1.2vmin;
+   font-size: 1.6vmin;
 }
 
 .div_bar_search .instruction_search .term_of_use {
@@ -95,7 +95,7 @@
 }
 
 .section_download .div_result .information_result {
-   font-size: 1.4vmin;
+   font-size: 1.6vmin;
    width: 35%;
    text-align: center;
 }
@@ -118,6 +118,9 @@
    background-color: white;
    color: #1d1d1e;
    padding: 5px 4px;
+}
+.video_sharing {
+   width: 54.5vmin;
 }
 
 .all_result_from_search .container_button_download {
