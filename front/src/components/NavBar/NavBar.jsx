@@ -44,6 +44,10 @@ const NavBar = () => {
                </select>
             </div>
          </div>
+
+         <div className="humberger-menu">
+            <i className="fa fa-music"></i>
+         </div>
       </div>
    );
 };
