@@ -20,7 +20,6 @@ function Home() {
    useEffect(() => {
       function onHandleWindowSize() {
          setScreenWidth(getWindowSize());
-         setScreenHeight(getWindowSize());
       }
       window.addEventListener('resize', onHandleWindowSize);
       return () => {
@@ -35,7 +34,7 @@ function Home() {
    }
 
    return (
-      <div className="Home" id="home" onScroll={(e) => handleScroll(e)}>
+      <div className="Home" id="home">
          <HashLink to="/#home">
             <div className="goToTop">Up</div>
          </HashLink>
