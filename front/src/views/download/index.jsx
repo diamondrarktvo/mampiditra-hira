@@ -24,6 +24,8 @@ function Download() {
    const [isConvert, setIsConvert] = useState(false);
    const [linkToDownload, setLinkToDownload] = useState(null);
 
+   console.log('downloading : ', downloading);
+   console.log('linkToDownload : ', linkToDownload);
    const onHandleChangeInput = (e) => {
       let value_input_search = e.target.value;
       setMotCleSearch(value_input_search);
@@ -123,6 +125,7 @@ function Download() {
                            source={one_result.snippet.channelTitle}
                            urlVideo={`https://www.youtube.com/watch?v=${one_result.id.videoId}`}
                            id={one_result.id.videoId}
+                           setLinkToDownload={setLinkToDownload}
                         />
                         {downloading.download &&
                            downloading.idVideoToDownload ===
@@ -137,19 +140,23 @@ function Download() {
                                     conversion puis download pour lancer le
                                     téléchargement.
                                  </p>
-                                 {linkToDownload !== null && (
-                                    <a
-                                       className="bouton_to_download"
-                                       href={linkToDownload}
-                                       style={{ marginBottom: '8px' }}
-                                    >
-                                       <button
-                                          style={{ backgroundColor: '#a8cf45' }}
+                                 {linkToDownload !== null &&
+                                    one_result.id.videoId ===
+                                       downloading.idVideoToDownload && (
+                                       <a
+                                          className="bouton_to_download"
+                                          href={linkToDownload}
+                                          style={{ marginBottom: '8px' }}
                                        >
-                                          Download
-                                       </button>
-                                    </a>
-                                 )}
+                                          <button
+                                             style={{
+                                                backgroundColor: '#a8cf45',
+                                             }}
+                                          >
+                                             Download
+                                          </button>
+                                       </a>
+                                    )}
                                  <div className="bouton_to_convert">
                                     <button
                                        style={{ backgroundColor: '#0098da' }}
