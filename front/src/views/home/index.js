@@ -1,6 +1,7 @@
 import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import './home.css';
 
 //components
@@ -12,14 +13,15 @@ import album_ph from '../../assets/images/forgotten_alb.jpeg';
 import background_ph from '../../assets/images/backgroun_alb.png';
 
 function Home() {
-   const [screenWidth, setScreenWidth] = useState(getWindowSize()); //utile pour responsive faq
-   //const [screenHeight, setScreenHeight] = useState(getWindowSize()); //utile pour afficher le boutton up
-   const degre = screenWidth >= 1400 ? [-16, 8, 13] : [0, 0, 0];
+   const { t } = useTranslation();
+   const [screenWidth, setScreenWidth] = useState(getWindowSize().innerWidth); //utile pour responsive faq
+   const [screenHeight, setScreenHeight] = useState(0); //utile pour afficher le boutton up
+   const degre = screenWidth >= 1400 ? [-16, 3, 13] : [0, 0, 0];
 
    /*Effet pour surveiller si l'écran a rediminuer ou élargit*/
    useEffect(() => {
       function onHandleWindowSize() {
-         setScreenWidth(getWindowSize());
+         setScreenWidth(getWindowSize().innerWidth);
       }
       window.addEventListener('resize', onHandleWindowSize);
       return () => {
@@ -29,35 +31,34 @@ function Home() {
 
    /*Get le width de l'écran*/
    function getWindowSize() {
-      const { innerWidth, innerHeight } = window;
-      return { innerWidth, innerHeight };
+      const { innerWidth } = window;
+      return { innerWidth };
    }
+
+   /*detect if user scroll page*/
+   window.addEventListener('scroll', (e) => {
+      setScreenHeight(window.scrollY);
+   });
 
    return (
       <div className="Home" id="home">
-         <HashLink to="/#home">
-            <div className="goToTop">Up</div>
-         </HashLink>
+         {screenHeight >= 200 && (
+            <HashLink to="/#home">
+               <div className="goToTop">
+                  <i className="fa fa-solid fa-arrow-up"></i>
+               </div>
+            </HashLink>
+         )}
          <div className="landing">
             <div className="content_landing">
                <h1 style={{ fontSize: '4.5vmin' }}>MP3 DOWNLOADER GASY</h1>
-               <h4>
-                  LoremAdipisicing aliquip ullamco consectetur non id
-                  reprehenderit eiusmod proident Lorem. Eu id id pariatur aliqua
-                  dolore consequat consectetur enim aliquip esse ullamco aute
-                  nostrud fugiat. Magna deserunt ex sint id qui culpa ad.
-                  Pariatur tempor ullamco dolor est aliqua do esse voluptate
-                  proident adipisicing tempor. Esse sunt id nulla id cillum ad
-                  commodo aute labore. Adipisicing do culpa consequat eu enim.
-                  Cupidatat laboris sit sunt incididunt anim esse voluptate
-                  dolor adipisicing nostrud velit culpa sit nulla.
-               </h4>
+               <h4>{t('message_landing')}</h4>
                <div className="button_utils">
                   <Link to="/telechargement">
-                     <button>Get started</button>
+                     <button>{t('bouton_started_landing')} </button>
                   </Link>
                   <HashLink to="/#about">
-                     <button>More info</button>
+                     <button>{t('bouton_more_landing')} </button>
                   </HashLink>
                </div>
             </div>
@@ -82,72 +83,47 @@ function Home() {
                   />
                </div>
                <div className="description_brand">
-                  <TitleCustom title="Music" />
+                  <TitleCustom title={t('title_custom_brand_one')} />
                   <div className="info_description_brand">
-                     <h1>Download latest song or album</h1>
-                     <p>
-                        ENostrud minim consectetur nisi Lorem cillum minim do.
-                        Magna mollit elit eiusmod ex cupidatat adipisicing
-                        dolore. In cillum eiusmod laborum proident anim non quis
-                        voluptate aliquip dolore quis. Qui ipsum duis officia
-                        est anim fugiat. Veniam tempor qui cillum adipisicing
-                        qui qui ea labore id eiusmod reprehenderit sunt.
-                     </p>
+                     <h1>{t('sous_titre_brand_one')}</h1>
+                     <p>{t('texte_brand_one')}</p>
                      <Link to="/telechargement">
-                        <button>Télecharger</button>
+                        <button>{t('boutton_download_brand_one')} </button>
                      </Link>
                   </div>
                </div>
             </div>
 
             <div className="brand_two" id="about">
-               <TitleCustom title="About us" />
+               <TitleCustom title={t('title_custom_brand_two')} />
                <div className="description_about">
-                  <p>
-                     Pariatur fugiat duis deserunt cupidatat aliqua officia
-                     adipisicing sunt nulla cupidatat. Dolor tempor consequat
-                     commodo nulla ex officia exercitation ad incididunt do est
-                     occaecat tempor. Consectetur adipisicing pariatur est
-                     labore commodo deserunt ipsum commodo ullamco ex. Velit
-                     officia esse ex in nisi incididunt Lorem proident
-                     consequat. Aliqua eu consectetur exercitation ex cupidatat
-                     pariatur mollit aliqua commodo nisi.
-                  </p>
+                  <p>{t('texte_brand_two')}</p>
                </div>
             </div>
 
             <div className="brand brand_three" id="faq">
-               <TitleCustom title="FAQ" />
+               <TitleCustom title={t('title_custom_brand_three')} />
                <div className="question_faq">
                   <div
                      className="faq_content"
                      style={{ transform: `rotate(${degre[0]}deg)` }}
                   >
-                     <h3>Question 1 ?</h3>
-                     <p>Amet incididunt in commodo fugiat.</p>
+                     <h3>{t('label_question')} 1 ?</h3>
+                     <p>{t('response_1')} </p>
                   </div>
                   <div
                      className="faq_content"
                      style={{ transform: `rotate(${degre[1]}deg)` }}
                   >
-                     <h3>Question 2 ?</h3>
-                     <p>
-                        Veniam non adipisicing cupidatat culpa consequat ipsum
-                        fugiat voluptate ullamco. Nostrud mollit dolore nisi eu
-                        nisi id nostrud enim amet ea incididunt. Aliquip est do
-                        non cupidatat. Proident id sit ea dolor duis eiusmod.
-                        Proident sint ipsum aute ex ullamco dolore dolore dolore
-                        do nulla ullamco do aliquip est. Proident pariatur
-                        mollit deserunt nulla eiusmod fugiat officia et sit nisi
-                        qui nisi ad proident.
-                     </p>
+                     <h3>{t('label_question')} 2 ?</h3>
+                     <p>{t('response_2')}</p>
                   </div>
                   <div
                      className="faq_content"
                      style={{ transform: `rotate(${degre[2]}deg)` }}
                   >
-                     <h3>Question 3 ?</h3>
-                     <p>Ut velit consequat ut nulla ea mollit.</p>
+                     <h3>{t('label_question')} 3 ?</h3>
+                     <p>{t('response_3')} </p>
                   </div>
                </div>
             </div>

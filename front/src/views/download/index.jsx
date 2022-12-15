@@ -111,7 +111,7 @@ function Download() {
                               one_result.id.videoId && (
                               <div className="container_video_playing">
                                  <iframe
-                                    width="340"
+                                    className="video_sharing"
                                     title={one_result.snippet.title}
                                     height="280"
                                     src={`https://www.youtube.com/embed/${one_result.id.videoId}`}
