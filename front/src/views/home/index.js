@@ -13,7 +13,7 @@ import background_ph from '../../assets/images/backgroun_alb.png';
 
 function Home() {
    const [screenWidth, setScreenWidth] = useState(getWindowSize()); //utile pour responsive faq
-   const [screenHeight, setScreenHeight] = useState(getWindowSize()); //utile pour afficher le boutton up
+   //const [screenHeight, setScreenHeight] = useState(getWindowSize()); //utile pour afficher le boutton up
    const degre = screenWidth >= 1400 ? [-16, 8, 13] : [0, 0, 0];
 
    /*Effet pour surveiller si l'écran a rediminuer ou élargit*/
@@ -32,11 +32,6 @@ function Home() {
    function getWindowSize() {
       const { innerWidth, innerHeight } = window;
       return { innerWidth, innerHeight };
-   }
-
-   /*detect if client scroll*/
-   function handleScroll(e) {
-      console.log(e.target.scrollHeig);
    }
 
    return (

@@ -24,8 +24,6 @@ function Download() {
    const [isConvert, setIsConvert] = useState(false);
    const [linkToDownload, setLinkToDownload] = useState(null);
 
-   console.log('downloading : ', downloading);
-   console.log('linkToDownload : ', linkToDownload);
    const onHandleChangeInput = (e) => {
       let value_input_search = e.target.value;
       setMotCleSearch(value_input_search);
