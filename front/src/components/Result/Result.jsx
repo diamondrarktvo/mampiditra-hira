@@ -8,7 +8,7 @@ import {
    beforeDownload,
 } from '../../redux/actions/action_creators';
 
-function Result({ titre, source, urlVideo, id }) {
+function Result({ titre, source, urlVideo, id, setLinkToDownload }) {
    const streaming = useSelector((selector) => selector.resultat.streaming);
    const downloading = useSelector((selector) => selector.resultat.downloading);
    const dispatch = useDispatch();
@@ -21,6 +21,7 @@ function Result({ titre, source, urlVideo, id }) {
                <button
                   onClick={() => {
                      dispatch(beforeDownload(id));
+                     setLinkToDownload(null);
                   }}
                >
                   {downloading.download && downloading.idVideoToDownload === id //on teste si c'est vraiment cqu'on clique
