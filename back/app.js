@@ -20,6 +20,9 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use('/', (req, res) => {
+    res.status(200).json({message: "OK"})
+});
 app.use('/api/v1/musics', musicRoutes);
 
 module.exports = app;
