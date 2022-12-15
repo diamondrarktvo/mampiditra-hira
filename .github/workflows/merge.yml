@@ -38,9 +38,9 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: '/front' 
+        source_file: 'front/' 
         destination_repo: 'diamondrarktvo/mp3-downloader-prod'
-        destination_folder: '/front'
+        destination_folder: '/'
         user_email: 'amada.rktvo@gmail.com'
         user_name: 'diamondrarktvo'
         commit_message: "AUTO: Copying front folder from repos develop to preprod"
@@ -52,9 +52,9 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: '/back' 
+        source_file: 'back/' 
         destination_repo: 'diamondrarktvo/mp3-downloader-prod' 
-        destination_folder: '/back' 
+        destination_folder: '/' 
         user_email: 'amada.rktvo@gmail.com'
         user_name: 'diamondrarktvo'
         commit_message: "AUTO: Copying back folder from repos develop to preprod"
