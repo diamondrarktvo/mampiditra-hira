@@ -1,12 +1,20 @@
 import React from 'react';
 import './Footer.css';
 
-function Footer (){
-    return (
-        <div className="container_footer">
-            <p>Copyright by Dama 2022</p>
-        </div>
-    )
+function Footer() {
+   const year = new Date().getFullYear();
+   console.log('dama year : ', year);
+   return (
+      <div className="container_footer">
+         <p>
+            Copyright by{' '}
+            <a href="https://portfolio.iteam-s.mg/?u=Dama" target="_blank">
+               Dama
+            </a>{' '}
+            {year}
+         </p>
+      </div>
+   );
 }
 
 export default Footer;
