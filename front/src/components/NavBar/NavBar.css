@@ -75,6 +75,10 @@
    align-items: center;
 }
 
+.brand_title_navigation {
+   display: none;
+}
+
 .menu .other_menu select {
    font-size: calc(10px + 0.8vmin);
    width: 100px;
@@ -102,6 +106,9 @@
    .menu {
       display: none;
    }
+   .brand_title_navigation {
+      display: inline;
+   }
    .humberger-menu {
       display: block;
    }
@@ -122,3 +129,40 @@
    }
 }
 /*# sourceMappingURL=NavBar.css.map */
+
+/*POPOVER MENU RESPONSIVE*/
+
+.hide_menu_burger {
+   display: none;
+}
+.popover_menu_humberger {
+   position: absolute;
+   right: 20px;
+   top: 70px;
+   background-color: white;
+   width: 180px;
+   border-radius: 30px;
+   margin: 0px;
+   padding: 0px;
+   font-size: 16px;
+   display: flex;
+   z-index: 3000;
+   flex-direction: column;
+}
+
+.popover_menu_humberger .popover_main_menu ul li {
+   color: #1d1d1e;
+   margin: 8px 0px;
+}
+
+.popover_menu_humberger .popover_main_menu ul li:hover {
+   text-decoration: underline;
+   -webkit-text-decoration-color: #61dafb;
+   text-decoration-color: #61dafb;
+}
+
+.popover_menu_humberger .popover_main_menu ul select {
+   background-color: #1d1d1e;
+   color: white;
+   padding: 5px 10px;
+}
