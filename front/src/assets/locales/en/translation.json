@@ -24,6 +24,7 @@
    "response_3": "Ut velit consequat ut nulla ea mollit.",
    "______download__________________": "Download page_____________________",
    "start_download": "Start download",
+   "placeholder_input_search": "Enter your word here",
    "indication_before_usage": "By pressing 'Search', you confirm your consent to our ",
    "condition_utilisation_text": "Terms of Service.",
    "information_before_result_part_one": "Here you will find all search results for your search query.",
@@ -33,7 +34,11 @@
    "indication_relative_file": "The file is ready. Please click the convert button then download to start downloading.",
    "boutton_convert_mp3": "Convert to mp3",
    "conversion": "Conversion",
+   "boutton_down_mp3": "Download",
    "boutton_down_mp4": "Download MP4",
    "indication_relative_latest": "You can find the latest news here.",
-   "boutton_latest": "Latest"
+   "boutton_latest": "Latest music",
+   "______result__________________": "Result component_____________________",
+   "btn_donwload": "Download",
+   "btn_play": "Play"
 }

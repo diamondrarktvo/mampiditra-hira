@@ -57,7 +57,7 @@ function Download() {
          <div className="landing_download">
             <BackgroundSlideshow images={[alb_1, alb_2, alb_4, alb_3, alb_5]} />
             <HashLink to="#search">
-               <button>Start download</button>
+               <button>{t('start_download')}</button>
             </HashLink>
          </div>
          <div className="section_download" id="search">
@@ -69,7 +69,7 @@ function Download() {
                   <input
                      type="text"
                      id="bar_de_recherche"
-                     placeholder="Entrer votre clé ici..."
+                     placeholder="Enter key here ..."
                      onChange={(e) => onHandleChangeInput(e)}
                   />
                   <div className="icon_search">
@@ -81,10 +81,9 @@ function Download() {
                </div>
                <div className="instruction_search">
                   <p>
-                     En appuyant sur "Rechercher", vous confirmez votre
-                     consentement à nos{' '}
+                     {t('indication_before_usage')}{' '}
                      <Link to="/term-of-use" className="term_of_use">
-                        Conditions d'utilisation.
+                        {t('condition_utilisation_text')}
                      </Link>
                   </p>
                </div>
@@ -93,14 +92,11 @@ function Download() {
                {allResultFromSearch.length !== 0 && (
                   <div className="information_result">
                      <p>
-                        Vous trouverez ici tous les résultats de recherche pour
-                        votre requête de recherche "
+                        {t('information_before_result_part_one')} "
                         {motCleSearch ?? motCleSearch}
-                        ". Nous avons trouvé {allResultFromSearch.length}{' '}
-                        résultats correspondants. Vous avez maintenant la
-                        possibilité d'écouter chaque résultat avant de le
-                        télécharger. Si vous le souhaitez, cliquez sur le bouton
-                        "Play".
+                        ". {t('information_before_result_part_two')}{' '}
+                        {allResultFromSearch.length}{' '}
+                        {t('information_before_result_part_three')}
                      </p>
                   </div>
                )}
@@ -135,10 +131,8 @@ function Download() {
                                     {one_result.snippet.title}
                                  </h3>
                                  <p>
-                                    <i className="fa fa-music"></i> Le fichier
-                                    est prêt. Veuillez cliquer sur le bouton de
-                                    conversion puis download pour lancer le
-                                    téléchargement.
+                                    <i className="fa fa-music"></i>{' '}
+                                    {t('indication_relative_file')}
                                  </p>
                                  {linkToDownload !== null &&
                                     one_result.id.videoId ===
@@ -153,7 +147,7 @@ function Download() {
                                                 backgroundColor: '#a8cf45',
                                              }}
                                           >
-                                             Download
+                                             {t('boutton_down_mp3')}
                                           </button>
                                        </a>
                                     )}
@@ -165,13 +159,13 @@ function Download() {
                                        }
                                     >
                                        {isConvert
-                                          ? 'Conversion...'
-                                          : 'Convert to MP3'}
+                                          ? t('conversion')
+                                          : t('boutton_convert_mp3')}
                                     </button>
                                     <button
                                        style={{ backgroundColor: '#0098da' }}
                                     >
-                                       Download MP4
+                                       {t('boutton_down_mp4')}
                                     </button>
                                  </div>
                               </div>
@@ -183,13 +177,14 @@ function Download() {
             <div className="latest_music">
                <div>
                   <p>
-                     <i className="fa fa-bomb"></i> Vous pouvez retrouvez ici
-                     les derniers nouveautés. <i className="fa fa-bomb"></i>
+                     <i className="fa fa-bomb"></i>{' '}
+                     {t('indication_relative_latest')}{' '}
+                     <i className="fa fa-bomb"></i>
                   </p>
                </div>
                <Link to="/latest-music">
                   <button>
-                     <i className="fa fa-music"></i> latest music
+                     <i className="fa fa-music"></i> {t('boutton_latest')}
                   </button>
                </Link>
             </div>

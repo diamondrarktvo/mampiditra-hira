@@ -24,6 +24,7 @@
    "response_3": "Pour que le résultat soit que personne ne l'adoucit.",
    "______download__________________": "Download page_____________________",
    "start_download": "Commencer télecharger",
+   "placeholder_input_search": "Entrer votre mot ici",
    "indication_before_usage": "En appuyant sur 'Rechercher', vous confirmez votre consentement à nos ",
    "condition_utilisation_text": "Conditions d'utilisation.",
    "information_before_result_part_one": "Vous trouverez ici tous les résultats de recherche pour votre requête de recherche",
@@ -33,7 +34,11 @@
    "indication_relative_file": "Le fichier est prêt. Veuillez cliquer sur le bouton de conversion puis download pour lancer le téléchargement.",
    "boutton_convert_mp3": "Convertir MP3",
    "conversion": "Conversion",
+   "boutton_down_mp3": "Télecharger",
    "boutton_down_mp4": "Télécharger MP4",
    "indication_relative_latest": "Vous pouvez retrouvez ici les derniers nouveautés.",
-   "boutton_latest": "Nouveautés"
+   "boutton_latest": "Nouveautés",
+   "______result__________________": "Result component_____________________",
+   "btn_donwload": "Télecharger",
+   "btn_play": "Lire"
 }
