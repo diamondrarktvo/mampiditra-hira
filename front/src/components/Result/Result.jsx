@@ -1,5 +1,6 @@
 import React /*useState*/ from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import './Result.css';
 
 //action créators
@@ -9,6 +10,7 @@ import {
 } from '../../redux/actions/action_creators';
 
 function Result({ titre, source, urlVideo, id, setLinkToDownload }) {
+   const { t } = useTranslation();
    const streaming = useSelector((selector) => selector.resultat.streaming);
    const downloading = useSelector((selector) => selector.resultat.downloading);
    const dispatch = useDispatch();
@@ -34,8 +36,8 @@ function Result({ titre, source, urlVideo, id, setLinkToDownload }) {
                   }}
                >
                   {streaming.playing && streaming.idVideoToPlay === id
-                     ? 'Stop'
-                     : 'Play'}
+                     ? t('btn_donwload')
+                     : t('btn_play')}
                </button>
             </div>
          </div>
