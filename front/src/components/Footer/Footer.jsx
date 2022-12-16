@@ -8,7 +8,7 @@ function Footer() {
       <div className="container_footer">
          <p>
             Copyright by{' '}
-            <a href="https://portfolio.iteam-s.mg/?u=Dama" target="_blank">
+            <a rel="noreferrer" href="https://portfolio.iteam-s.mg/?u=Dama" target="_blank">
                Dama
             </a>{' '}
             {year}
