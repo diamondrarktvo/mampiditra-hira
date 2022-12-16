@@ -3,6 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import BackgroundSlideshow from 'react-background-slideshow';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import './download.css';
 import { Result } from '../../components';
 import { MusicService } from '../../services';
@@ -16,6 +17,7 @@ import alb_4 from '../../assets/images/album/illustr_music_2.jpg';
 import alb_5 from '../../assets/images/album/illustr_music_3.jpg';
 
 function Download() {
+   const { t } = useTranslation();
    const streaming = useSelector((selector) => selector.resultat.streaming);
    const downloading = useSelector((selector) => selector.resultat.downloading);
    const [motCleSearch, setMotCleSearch] = useState(null);
