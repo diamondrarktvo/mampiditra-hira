@@ -1,6 +1,8 @@
-# mampiditra-hira web application
+# mampiditra-hira web application (site pour télecharger des songs gratuit)
 
-# Contribution by Tino - Mihary - Diams
+## Techonologie utilisé :
+* React (front end)
+* Nodejs (back end)
 
 ## Présentation <br>
 <p align="center">
