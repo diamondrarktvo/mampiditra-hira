@@ -56,10 +56,6 @@ const NavBar = () => {
             </div>
          </div>
 
-         <Link to="/telechargement" className="brand_title_navigation">
-            <h2>MP3 DOWNLOADER GASY</h2>
-         </Link>
-
          <div className="humberger-menu" onClick={() => openModal()}>
             <i className="fa fa-music"></i>
          </div>
