@@ -75,10 +75,6 @@
    align-items: center;
 }
 
-.brand_title_navigation {
-   display: none;
-}
-
 .menu .other_menu select {
    font-size: calc(10px + 0.8vmin);
    width: 100px;
@@ -105,9 +101,6 @@
 @media only screen and (max-width: 720px) {
    .menu {
       display: none;
-   }
-   .brand_title_navigation {
-      display: inline;
    }
    .humberger-menu {
       display: block;
