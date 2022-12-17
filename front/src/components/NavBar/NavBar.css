@@ -75,6 +75,10 @@
    align-items: center;
 }
 
+.menu .other_menu p {
+   color: white;
+}
+
 .menu .other_menu select {
    font-size: calc(10px + 0.8vmin);
    width: 100px;

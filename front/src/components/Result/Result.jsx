@@ -36,7 +36,7 @@ function Result({ titre, source, urlVideo, id, setLinkToDownload }) {
                   }}
                >
                   {streaming.playing && streaming.idVideoToPlay === id
-                     ? t('btn_donwload')
+                     ? t('btn_stop')
                      : t('btn_play')}
                </button>
             </div>
